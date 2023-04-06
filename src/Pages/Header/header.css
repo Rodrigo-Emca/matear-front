@@ -1,0 +1,26 @@
+.header-container {
+    min-height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.anchor-header .link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 40px;
+    color: white;
+    padding: 20px;
+
+}
+
+.logo-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 25%;
+}
