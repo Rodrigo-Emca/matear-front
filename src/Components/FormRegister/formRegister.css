@@ -1,230 +1,219 @@
 .register {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-    height: 100vh;
-    margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 10%;
+  color: aliceblue;
 }
 
-.register>div{
-    margin: 25px 360px;
+.register > div {
+  margin: 25px 360px;
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    margin-top: -200px;
-    gap: 22px;
-    margin: 0 136px;
-    margin-bottom: 260px;
-    
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.form fieldset {
+.form input {
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 5x;
+  border-radius: 5px;
+  width: 80%;
+  align-self: center;
+}
+
+.form .notification-check {
+  border: none;
+  background-color: white;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: auto;
+}
+
+.form .notification-check label {
+  font-weight: 200;
+  font-size: 10px;
+  
+  letter-spacing: 0.05em;
+  color: #1f1f1f;
+}
+
+
+.form .sign-up {
+  width: 384px;
+  height: 48px;
+  background: black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ebebeb;
+  letter-spacing: 0.05em;
+  box-shadow: 2px 2px rgb(248, 248, 248);
+  text-decoration: none;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.form .sign-in-google {
+  width: 384px;
+  height: 48px;
+  background: white;
+  box-shadow: 2px 2px rgb(10, 10, 10);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 2px;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.form .sign-in-google span {
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: black;
+}
+
+.form label {
+  display: flex;
+  justify-content: center;
+
+}
+.form > p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+.form > p .link {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+.link span {
+  color: black;
+}
+
+.register-fondo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 4rem;
+  width: 100%;
+}
+
+.img-register img {
+  width: 100%;
+  height: 100vh;
+}
+.register {
+  height: 100vh;
+}
+.register-fondo {
+  padding-top: 50px;
+}
+
+.register-text {
+  left: 168px;
+  top: 215px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+
+  width: 50%;
+}
+
+.register h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.form .sign-up,
+.form .sign-in-google {
+  transition: background-color 0.3s ease;
+}
+
+.form .sign-up:hover,
+.form .sign-in-google:hover {
+  background-color: #1f1f1f;
+}
+
+.form input:focus {
+  animation: input-focus 0.5s forwards;
+}
+
+@keyframes input-focus {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 1024px) {
+  .register {
+    margin-top: -5%;
+  }
+  .form fieldset {
     width: 100%;
-    height: 48px;
-    background: #EBEBEB;
-    border: 1px solid rgba(31, 31, 31, 0.5);
-    border-radius: 10px;
-    position: relative;
-    margin: 0 auto;
-}
+  }
 
-.form fieldset legend {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    background: #4338CA;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-left: 15px;
-    padding-bottom: 3px;
-    text-align:end;
-}
-
-.form fieldset input {
-    border: none;
-    background: none;
-    width: 90%;
-    height: 25px;
-    border-radius: 10px;
-}
-
-
-
-.form .notification-check{
-    border: none;
-    background-color: white;
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    height: auto;
-}
-
-.form .notification-check input{
-    width: 16px;
-    height: 16px;
-    margin: 0;
-    border: 1px solid #1F1F1F;
-    border-radius: 5px;
-}
-
-.form .notification-check label{
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 0.05em;
-    color: #1F1F1F;
-}
-
-.form .sign-up{
-    width: 384px;
-    height: 48px;
-    background: #4338CA;
-border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    color: #EBEBEB;
-    letter-spacing: 0.05em;
-    box-shadow: 5px 5px rgb(244, 179, 51);
-    text-decoration: none;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-.form .sign-in-google{
-    width: 384px;
-    height: 48px;
-    background: #EBEBEB;
-    border: 1px solid #1F1F1F;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 2px;
-    text-decoration: none;
-    margin: 0 auto;
-}
-
-
-.form .sign-in-google span{
-    opacity: 0.5;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #1F1F1F;
-}
-
-.form>p{
-    text-align: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    letter-spacing: 0.05em;
-}
-
-.form>p .link{
-    text-decoration: none;
-    color: #4338CA; 
-    font-weight: bold;
-}
-
-
-
-.register-fondo{
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    gap: 4rem;
+  .form {
+    margin-bottom: 300px;
+  }
+  .form .sign-up {
     width: 100%;
-}
+  }
 
-.img-register img{
-    width: 100%;
-    height: 100vh;
-}
-.register{
-    height: 100vh;
-}
-.register-fondo{
-    padding-top: 50px;
-}
-
-.register-text{
-    left: 168px;
-    top: 215px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-    
-   width: 50%;
-}
-
-.register h2{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-}
-
-
-
-
-@media (max-width: 1024px){
-    .register {
-        
-        margin-top: -5%;
-    }
-    .form fieldset {
-        width: 100%;
-       
-    }
-
-    .form {
-        margin-bottom: 300px;
-    }
-    .form .sign-up{
-        width: 100%;
-    }
-    
-    .form .sign-in-google{
+  .form .sign-in-google {
     width: 270px;
-}
-.register-fondo{
+  }
+  .register-fondo {
     padding-top: 100px;
+  }
 }
- }
 
-@media (max-width: 720px){
-    .register {
-        
-        margin-top: -14%;
-    }
+@media (max-width: 720px) {
+  .register {
+    margin-top: -14%;
+  }
 
-    .form fieldset {
-        width: 100%;
-       
-    }
-    .form .sign-up{
-        width: 100%;
-    }
-    
-    .form .sign-in-google{
+  .form fieldset {
+    width: 100%;
+  }
+  .form .sign-up {
+    width: 100%;
+  }
+
+  .form .sign-in-google {
     width: 270px;
-}
-
+  }
 }

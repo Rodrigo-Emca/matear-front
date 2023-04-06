@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import "./formLg.css";
+import "./formLogin.css";
 import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
 import axios from "axios";
 import Swal from 'sweetalert2'
+import google from '../../Img/Google.svg'
 
 export default function Form() {
   
@@ -19,7 +20,7 @@ export default function Form() {
         [passwordRef.current.name]: passwordRef.current.value,
     }
     
-    let url = 'https://minga-grupoblanco.onrender.com/api/signin/'
+    let url = 'http://localhost:8080/api/auth/signin'
     
 
     let admin
@@ -38,14 +39,22 @@ export default function Form() {
           setInterval(() => window.location.href = '/', 1000)
         })
         Swal.fire({
-          title: 'Loggin success',
-          showClass: {
-            popup: 'animate__animated animate__fadeInDown'
+          titleText: 'Loggin success',
+          icon: 'success',
+          confirmButtonText: 'Ok',
+          background: 'black',
+          customClass: {
+            title: 'text-white',
+            confirmButton: 'bg-green-500'
           },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
+          confirmButtonStyles: {
+            background: 'red',
+            color: 'white'
           }
-        })
+        });
+        
+
+        
         event.target.reset()
     } catch(error) {
         console.log(error)
@@ -62,18 +71,16 @@ export default function Form() {
   return (
     <div className="register-fondo">
       <div className="register">
-        <Wellcome />
+       
         <form className="form"  onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Email</legend>
+        <Wellcome />
+            <label className="label">Email</label>
             <input type="email" name="mail" id="mail" ref={emailRef}  required />
     
-          </fieldset>
-          <fieldset>
-            <legend>Password</legend>
+         
+            <label className="label">Password</label>
             <input type="password" name="password" id="password" ref={passwordRef}  required />
-            
-          </fieldset>
+          
           <div className="buttons-container">
           <div>
             <button type="submit" className="sign-up">
@@ -82,23 +89,18 @@ export default function Form() {
           </div>
           <div>
           <a href="#" className="sign-in-google">
-            <Image src="./form-img/Google.svg" />
+          <Image src={google} />
             <span>Sign in with Google</span>
           </a>
           </div>
           </div>
           <p>
-            Already have an account?{" "}
+          Don't have an account yet?{" "}
             <a href="#" className="link">
-              Log in
+              Register
             </a>
           </p>
-          <p>
-            Go back to{" "}
-            <a href="#" className="link">
-              home page
-            </a>
-          </p>
+         
         </form>
       </div>
     </div>

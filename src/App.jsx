@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
 import { router } from './Pages/index.js'
-// import { RouterProvider } from 'react-router-dom'
-import { store } from './Store/store.js'
 import { Provider } from 'react-redux';
+import { RouterProvider } from 'react-router-dom';
+import store from './Store/store.js';
 
 function App() {
   return (
-    <div className="App">
-      <p>hola mundo</p>
-    </div>
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   );
 }
 
