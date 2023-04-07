@@ -1,9 +1,9 @@
 import React from 'react'
-import {Link as Anchor,useNavigate } from 'react-router-dom'
+import {Link as Anchor, useNavigate } from 'react-router-dom'
 import './productCard.css'
 
 export default function ProductCard(props) {
-    // console.log(props)
+    //console.log(props.idProduct)
     // console.log(props.product_id)
 
     return (
@@ -32,7 +32,7 @@ export default function ProductCard(props) {
                             <li><a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
                         </ul>
-                        <Anchor to={'/details'} className='' props={props}>Details</Anchor>
+                        <Anchor to={`/details/${props.idProduct}`} className=''>Details</Anchor>
                     </div>
                 </div>
             </div>

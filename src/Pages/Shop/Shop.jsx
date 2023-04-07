@@ -30,6 +30,7 @@ export default function Shop() {
                             reload={reload}
                             setReload={setReload}
                             key={productoIndividual._id}
+                            idProduct={productoIndividual._id}
                             product_id={productoIndividual.product_id}
                             photos={productoIndividual.photo}
                         />
