@@ -168,7 +168,6 @@ p {
     color: white;
     font-size: 15px;
   }
-  
   .anchors-pages {
     display: flex;
     gap: 1rem;
@@ -180,6 +179,11 @@ p {
     color: white;
     font-size: 20px;
     text-decoration: none;
+  }
+  
+  .anchor:hover {
+    color: #3fb890;
+    transition: 0.3s;
   }
   
   .pay {
