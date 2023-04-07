@@ -5,6 +5,7 @@ import Image from "../Image/Image";
 import axios from "axios";
 import Swal from 'sweetalert2'
 import google from '../../Img/Google.svg'
+import { NavLink } from "react-router-dom";
 
 export default function Form() {
   
@@ -96,9 +97,9 @@ export default function Form() {
           </div>
           <p className="color-white">
           Don't have an account yet?{" "}
-            <a href="#" className="link-login-register">
+            <NavLink to={'/signup'} className="link">
               Register
-            </a>
+            </NavLink>
           </p>
          
         </form>
