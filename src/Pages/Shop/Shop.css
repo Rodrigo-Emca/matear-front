@@ -7,6 +7,6 @@
     gap: 6vh;
     position: relative;
     top: 3rem;
-
+    padding-top: 10%;
     border: red solid 1px
 }
