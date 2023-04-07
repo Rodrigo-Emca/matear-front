@@ -12,7 +12,7 @@ export default function Shop() {
 
 
     let productos = useSelector(store => store.productos.productos)
-    //console.log(productos)
+    console.log(productos)
     
     useEffect(
         () => {
