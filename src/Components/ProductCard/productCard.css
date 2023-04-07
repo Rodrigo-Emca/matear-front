@@ -1,123 +1,97 @@
-.card-container{
-    width: 22rem;
-    height: 11rem;
-    display: flex;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
-    border-radius: 10px;
+
+.container {
+    background: #250008;
+    font-family: sans-serif;
+
 }
-.span-card{
-    height: 17.78vh;
-    width: 0.4vw;
-    background: #F97316;
+.card {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 360px;
+    height: 400px;
+    background: #000;
+}
+.card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card .image img {
+    width: 100%;
+    transition: .5s;
+}
+.card:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);/*100%*/
+}
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;/*100%*/
+    height: 100%;
+    background: #070707;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.card:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card .details .center {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card .details .center h1 {
+    margin: 0;
+    padding: 0;
+    color: #ff3636;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.card .details .center h1 span {
+    font-size: 14px;
+    color: #262626;
+}
+.card .details .center p {
+    margin: 10px 0;
+    padding: 0;
+    color: #262626;
+}
+.card .details .center ul {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+}
+.card .details .center ul li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+.card .details .center ul li a {
+    display: block;
+    background: #262626;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transform: .5s;
+}
+.card .details .center ul li a:hover {
+    background: #ff3636;
 }
 
-.span{
-    height: 9rem;
-    width: 0.3rem;
-    background: #F97316;
-}
+/* RESPONSIVE */
 
-.inf-card{
-    width: 11rem;
-    height: 11rem;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    gap: 1vh;
-    padding-left: 1.5vh;
-    padding-top: 6vh;
-    border: red 1px solid;
-}
-.img-card{
-    width: 12rem;
-    height: 11rem;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 90px 10px 10px 90px;
-    
-}
-
-.title-card{
-    width: 10rem;
-    text-align: left;
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    position:relative;
-    top:3.7rem;
-}
-.category-card{
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #F97316;
-    position:relative;
-    bottom: 2.5rem;
-}
-
-.type-card{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 95.19%;
-}
-.btn-card{
-    width: 92px;
-    height: 35px;
-    margin-top: 1rem;
-    background: #D1FBF0;
-    padding: 1rem 1rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-    border-radius: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    border:none;
-    color: #00BA88;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    /* position:relative;
-    bottom: 3rem; */
-}
-
-
-
-.red-span{
-    background-color:#EF8481 ;
-}
-.orange-span{
-    background-color:#FC9C57 ;
-}
-.green-span{
-    background-color:#00BA88 ;
-}
-.purple-span{
-    background-color:#8883F0;
-}
-
-.red-type{
-    color: #EF8481;
-}
-.orange-type{
-    color: #FC9C57;
-}
-.green-type{
-    color: #00BA88;
-}
-.purple-type{
-    color: #8883F0;
-}
-
-
-@media (max-width:1023px){
+/* @media (max-width:1023px){
     .card{
         width: 50vw;
     }
@@ -162,4 +136,4 @@
     .img-card{
         height: 20vh;
     }
-}
+} */
