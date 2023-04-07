@@ -11,7 +11,7 @@ export default function Details() {
     const dispatch = useDispatch()
 
     let productoSimple = useSelector(store => store.producto.producto)
-    //console.log(productoSimple)
+    console.log(productoSimple)
     
     useEffect(
         () => {
