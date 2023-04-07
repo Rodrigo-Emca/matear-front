@@ -2,6 +2,7 @@
 .container {
     background: #250008;
     font-family: sans-serif;
+    border: black solid 1px;
 
 }
 .card {
@@ -27,12 +28,13 @@
     transform: translateX(30%);/*100%*/
 }
 .card .details {
+    border-right: black solid 1px;
     position: absolute;
     top: 0;
     left: 0;
     width: 70%;/*100%*/
     height: 100%;
-    background: #1f202c;
+    background: #AA8B56;
     transition: .5s;
     transform-origin: left;
     transform: perspective(2000px) rotateY(-90deg);
@@ -43,7 +45,7 @@
 .card .details .center {
     padding: 20px;
     text-align: center;
-    background: #1f202c ;
+    background: #AA8B56 ;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -51,27 +53,38 @@
 .card .details .center h1 {
     margin: 0;
     padding: 0;
-    color: white;
+    color: black;
     line-height: 20px;
     font-size: 20px;
     text-transform: uppercase;
 }
 .card .details .center h1 span {
     font-size: 14px;
-    color: white;
+    color: black;
 }
 .card .details .center p {
     margin: 10px 0;
     padding: 0;
-    color: white;
+    color: black;
 }
 .card .details .center h5 {
     margin: 10px 0;
-    text-align: justify;
+    text-align: center;
     padding: 0;
-    color: white;
+    color: black;
 }
 
+.logoMate{
+    width: 170px;
+    height: 90px;
+    position: relative;
+    bottom: 2.5rem;
+}
+
+.imagenCarrito{
+    width: 50px;
+    height: 50px;
+}
 
 /* RESPONSIVE */
 
