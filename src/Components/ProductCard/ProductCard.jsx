@@ -25,13 +25,15 @@ export default function ProductCard(props) {
                     <div className="center">
                         <h1>{props.product_id.title}</h1>
                         <p>{props.product_id.description}</p>
-                        <ul>
+                        <p>$ {props.product_id.price}</p>
+                        <p>Disponible: {props.product_id.stock} units</p>
+                        {/* <ul>
                             <li><a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i className="fa fa-google-plus" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
                             <li><a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        </ul>
+                        </ul> */}
                         <Anchor to={`/details/${props.idProduct}`} className=''>Details</Anchor>
                     </div>
                 </div>

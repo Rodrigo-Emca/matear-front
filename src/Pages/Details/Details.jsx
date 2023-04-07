@@ -11,7 +11,7 @@ export default function Details() {
     const dispatch = useDispatch()
 
     let productoSimple = useSelector(store => store.producto.producto)
-    console.log(productoSimple)
+    //console.log(productoSimple)
     
     useEffect(
         () => {
@@ -19,7 +19,6 @@ export default function Details() {
         },
         [reload]
     )
-    //Aquí puedes utilizar la variable id para hacer lo que necesites
 
     return (
         <div>
