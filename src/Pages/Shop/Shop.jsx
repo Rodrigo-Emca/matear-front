@@ -23,12 +23,20 @@ export default function Shop() {
 
     return (
         <div>
-            <p>Aqui deben mostrarse todos los productos</p>
             <div className='cont-cards'>
-                    {productos.length?(productos.map((productoIndividual) => (
-                            <ProductCard reload={reload} setReload={setReload} key={productoIndividual._id} title_={productoIndividual.title} category_={productoIndividual.category_id} photo={productoIndividual.cover_photo} _id={productoIndividual._id}/>
-                        ))):<p>not found</p>} 
-                </div>
+                {productos.length ? (
+                    productos.map((productoIndividual) => (
+                        <ProductCard
+                            reload={reload}
+                            setReload={setReload}
+                            key={productoIndividual._id}
+                            product_id={productoIndividual.product_id} // cambiar _id por product_id
+                        />
+                    ))
+                ) : (
+                    <p>not found</p>
+                )}
+            </div>
         </div>
     )
 }
