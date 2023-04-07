@@ -70,16 +70,16 @@ export default function Form() {
 
   return (
     <div className="login-fondo">
-      <div className="register">
+      <div className="login">
        
-        <form className="form"  onSubmit={handleSubmit}>
+        <form className="form-login"  onSubmit={handleSubmit}>
             <Wellcome />
-            <label className="label">Email</label>
-            <input type="email" name="mail" id="mail" ref={emailRef}  required />
+            <label className="color-white">Email</label>
+            <input className="email-login" type="email" name="mail" id="mail" ref={emailRef}  required />
     
          
-            <label className="label">Password</label>
-            <input type="password" name="password" id="password" ref={passwordRef}  required />
+            <label className="color-white">Password</label>
+            <input className="password-login" type="password" name="password" id="password" ref={passwordRef}  required />
           
           <div className="buttons-container">
           <div>
@@ -94,9 +94,9 @@ export default function Form() {
           </a>
           </div>
           </div>
-          <p>
+          <p className="color-white">
           Don't have an account yet?{" "}
-            <a href="#" className="link">
+            <a href="#" className="link-login-register">
               Register
             </a>
           </p>
