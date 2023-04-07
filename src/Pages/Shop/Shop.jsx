@@ -12,7 +12,7 @@ export default function Shop() {
 
 
     let productos = useSelector(store => store.productos.productos)
-    console.log(productos)
+    //console.log(productos)
     
     useEffect(
         () => {
@@ -30,7 +30,8 @@ export default function Shop() {
                             reload={reload}
                             setReload={setReload}
                             key={productoIndividual._id}
-                            product_id={productoIndividual.product_id} // cambiar _id por product_id
+                            product_id={productoIndividual.product_id}
+                            photos={productoIndividual.photo}
                         />
                     ))
                 ) : (
