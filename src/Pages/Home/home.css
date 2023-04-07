@@ -11,6 +11,6 @@
 .img-fondo{
     width: 50%;
     height: 100%;
-    object-fit: initial;
+    object-fit: cover;
 
 }

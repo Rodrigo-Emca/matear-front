@@ -5,6 +5,7 @@ import Image from "../Image/Image";
 import axios from "axios";
 import Swal from 'sweetalert2'
 import google from '../../Img/Google.svg'
+import { NavLink } from "react-router-dom";
 
 export default function Form() {
   
@@ -69,11 +70,11 @@ export default function Form() {
 }
 
   return (
-    <div className="register-fondo">
+    <div className="login-fondo">
       <div className="register">
        
         <form className="form"  onSubmit={handleSubmit}>
-        <Wellcome />
+            <Wellcome />
             <label className="label">Email</label>
             <input type="email" name="mail" id="mail" ref={emailRef}  required />
     
@@ -84,7 +85,7 @@ export default function Form() {
           <div className="buttons-container">
           <div>
             <button type="submit" className="sign-up">
-              Sign up
+              Sign in
             </button>
           </div>
           <div>
@@ -96,9 +97,9 @@ export default function Form() {
           </div>
           <p>
           Don't have an account yet?{" "}
-            <a href="#" className="link">
+            <NavLink to={'/signup'} className="link">
               Register
-            </a>
+            </NavLink>
           </p>
          
         </form>

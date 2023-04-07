@@ -1,0 +1,12 @@
+.cont-cards{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10vh;
+    gap: 6vh;
+    position: relative;
+    top: 3rem;
+
+    border: red solid 1px
+}
