@@ -24,7 +24,8 @@ export default function Details() {
     return (
         <div>
         <h1>Details</h1>
-        <p>ID: {id}</p>
+        <p>ID: {productoSimple._id}</p>
+        <p>Nombre del producto: {productoSimple.title}</p>
         </div>
     )
 }
