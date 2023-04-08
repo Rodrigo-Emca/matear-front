@@ -1,14 +1,12 @@
 import React from 'react'
 import './wellcome.css'
 
-import ImgLogoForm from '../../Img/logoMateAr.png'
-import Image from '../Image/Image'
+import ImgLogoForm from '../../Img/LOGO-MATEAR-NEGRO.png'
 
 export default function Wellcome() {
     return (
-        <section className='welcome-section'>
-            <Image className="logo" src={ImgLogoForm} />
-            {/* <p>Mateicos</p> */}
-        </section>
+        <div className='welcome-section'>
+            <img className='logo-size' src={ImgLogoForm} alt="logo-img" />
+        </div>
     )
 }
