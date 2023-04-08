@@ -22,22 +22,30 @@ export default function Shop() {
     )
 
     return (
-        <div>
-            <div className='cont-cards'>
-                {productos.length ? (
-                    productos.map((productoIndividual) => (
-                        <ProductCard
-                            reload={reload}
-                            setReload={setReload}
-                            key={productoIndividual._id}
-                            idProduct={productoIndividual._id}
-                            product_id={productoIndividual.product_id}
-                            photos={productoIndividual.photo}
-                        />
-                    ))
-                ) : (
-                    <p>not found</p>
-                )}
+        <div className='container'>
+            <div className='filtroPrecios'>
+                <p>Aqui va el filtro por precios</p>
+            </div>
+            <div className='contenedorFiltroYCards'>
+                <div className='filtroTexto'>
+                    <p>Aquí va el filtro busqueda por texto</p>
+                </div>
+                <div className='cont-cards'>
+                    {productos.length ? (
+                        productos.map((productoIndividual) => (
+                            <ProductCard
+                                reload={reload}
+                                setReload={setReload}
+                                key={productoIndividual._id}
+                                idProduct={productoIndividual._id}
+                                product_id={productoIndividual.product_id}
+                                photos={productoIndividual.photo}
+                            />
+                        ))
+                    ) : (
+                        <p>not found</p>
+                    )}
+                </div>
             </div>
         </div>
     )
