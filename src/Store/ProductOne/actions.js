@@ -4,10 +4,11 @@ import axios from "axios";
 
 const get_one_product = createAsyncThunk(
     'get_one_product',
-    async({id}) => {
+    async({id, token}) => {
+        let headers = { headers: { 'Authorization': `Bearer ${token}` } }
         let url = `http://localhost:8080/api/article/${id}`;
         try{
-            let response = await axios.get(url)
+            let response = await axios.get(url , headers)
             //console.log(response.data.message)
             return{
                 producto: response.data.message
