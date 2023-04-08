@@ -1,0 +1,25 @@
+.anchor-header {
+    display: flex;
+    gap: 25px;
+    
+}
+
+.anchor-header .link-home {
+    height: 30px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+
+}
+
+.anchor-header .link-home:hover {
+    color: white;
+    /* background-color: white;
+    height: 35px;
+    padding: 5px; */
+    border-bottom: 2px solid white ;
+    
+   
+}
