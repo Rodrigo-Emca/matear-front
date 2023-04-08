@@ -8,19 +8,11 @@
     background-color: black;
     z-index: 1
 }
-
-.anchor-header .link {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 25px;
-    color: white;
-    padding: 20px;
-}
-
 .logo-header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 120px;
-    height: 100px;
+    width: 12%;
+    height: 15%;
 }
+
