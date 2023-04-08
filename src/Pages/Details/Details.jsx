@@ -11,15 +11,14 @@ export default function Details() {
     const dispatch = useDispatch()
 
     let productoSimple = useSelector(store => store.producto.producto)
-    console.log(productoSimple)
-    
+    //console.log(productoSimple)
+    let token = localStorage.getItem('token')
     useEffect(
         () => {
-            dispatch(get_one_product({id}))
+            dispatch(get_one_product({id, token}))
         },
         [reload]
     )
-    //Aquí puedes utilizar la variable id para hacer lo que necesites
 
     return (
         <div>
