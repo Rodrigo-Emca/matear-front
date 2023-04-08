@@ -69,11 +69,11 @@ export default function Form() {
 }
 
   return (
-    <div className="register-fondo">
+    <div className="login-fondo">
       <div className="register">
        
         <form className="form"  onSubmit={handleSubmit}>
-        <Wellcome />
+            <Wellcome />
             <label className="label">Email</label>
             <input type="email" name="mail" id="mail" ref={emailRef}  required />
     
@@ -84,7 +84,7 @@ export default function Form() {
           <div className="buttons-container">
           <div>
             <button type="submit" className="sign-up">
-              Sign up
+              Sign in
             </button>
           </div>
           <div>
