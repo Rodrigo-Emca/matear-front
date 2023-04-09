@@ -1,15 +1,21 @@
 .conteiner-login {
     display: flex;
+    position: relative;
     width: 100%;
     height: 85vh;
-    background-color: #C5A880
+    /* background-color: black; */
+    background-image: url(../../Img/mateRegister3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* object-fit: cover; */
   }
   .img-form-login{
     display: flex;
     width: 50%;
     height: 100%;
     object-fit: cover;
-    /* filter: blur(1px); */
   }
   .conteiner-form-login{
     display: flex;
