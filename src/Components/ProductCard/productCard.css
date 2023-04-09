@@ -92,11 +92,6 @@
     align-items: center;
 }
 
-.imagenCarrito{
-    width: 30px;
-    height: 30px;
-}
-
 .favorite-icon {
     position: absolute;
     top: 10px;
