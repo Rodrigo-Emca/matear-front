@@ -70,45 +70,61 @@ export default function CarritoComponente() {
         });
     };
 
-return (
-    <div className='mainContainer'>
-    <table className='table'>
-        <thead>
-        <tr>
-            <th>Product</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Count</th>
-        </tr>
-        </thead>
-        <tbody>
-        {items.map((item, index) => (
-            <tr key={item.product.idProduct}>
-            <td>
-                <Anchor to={`/details/${item.product.idProduct}`} className="">
-                <img src={item.product.product_id.cover_photo} alt="imagen" className='productImage' />
-                </Anchor>
-            </td>
-            <td>{item.product.product_id.title}</td>
-            <td>$ {item.product.product_id.price} ARS</td>
-            <td>
-                <StockInfo stock={item.product.product_id.stock} />
-            </td>
-            <td>
-                <ContadorStock
-                index={index}
-                count={counts[index]}
-                incrementCount={incrementCount}
-                decrementCount={decrementCount}
-                outOfStock={item.product.product_id.out_of_stock}
-                removeItem={() => removeItem(item.product.idProduct)}
-                />
-            </td>
-            </tr>
-        ))}
-        </tbody>
-    </table>
-    </div>
-);
+    const calculateTotalPrice = () => {
+        let totalPrice = 0;
+        items.forEach((item, index) => {
+            const price = parseFloat(item.product.product_id.price);
+            const count = parseFloat(counts[index]);
+            totalPrice += price * count;
+        });
+        return totalPrice.toFixed(3);
+    }
+
+    return (
+        <div className='mainContainer'>
+            <table className='table'>
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Count</th>
+                    <th>Sub-total</th>
+                </tr>
+                </thead>
+                <tbody>
+                {items.map((item, index) => (
+                    <tr key={item.product.idProduct}>
+                    <td>
+                        <Anchor to={`/details/${item.product.idProduct}`} className="">
+                        <img src={item.product.product_id.cover_photo} alt="imagen" className='productImage' />
+                        </Anchor>
+                    </td>
+                    <td>{item.product.product_id.title}</td>
+                    <td>$ {item.product.product_id.price} ARS</td>
+                    <td>
+                        <StockInfo stock={item.product.product_id.stock} />
+                    </td>
+                    <td>
+                        <ContadorStock
+                        index={index}
+                        count={counts[index]}
+                        incrementCount={incrementCount}
+                        decrementCount={decrementCount}
+                        outOfStock={item.product.product_id.out_of_stock}
+                        removeItem={() => removeItem(item.product.idProduct)}
+                        />
+                    </td>
+                        <td>$ {(parseFloat(item.product.product_id.price) * parseFloat(counts[index])).toFixed(2)} ARS</td>
+                    </tr>
+                ))}
+                <tr>
+                    <td>Total purchase:</td>
+                    <td colSpan="5">$ {calculateTotalPrice()} ARS</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    );
 }

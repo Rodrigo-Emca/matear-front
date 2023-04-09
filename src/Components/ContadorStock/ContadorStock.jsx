@@ -18,7 +18,7 @@ export default function ContadorStock(props) {
                 onClick={handleDecrement}
                 disabled={outOfStock}
             >
-                {count === 1 ? "Remove Item" : "-"}
+                {count === 1 ? "Remove" : "-"}
             </button>
             <span className='countNumber'>{count}</span>
             <button
