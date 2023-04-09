@@ -14,11 +14,9 @@ import ImgFondo11 from '../../Img/cat-accesorios.jpg'
 import ImgLogo from '../../Img/LOGO-MATEAR-NEGRO2.png'
 export default function Home() {
     return (
-        <div className='container'>
+        <div className='container-princ'>
 
             <div className='container-home'>
-
-
                 <section class="seccion-final">
                     <img
                         id="imageCardGalleria"
@@ -28,44 +26,22 @@ export default function Home() {
                         id="imageCardGalleria"
                         src={ImgFondo2}
                         alt="..." />
-                    <img
-                        id="imageCardGalleria"
+                    {/* <img
+                        // id="imageCardGalleria"
                         src={ImgFondo3}
-                        alt="..." />
+                        alt="..." /> */}
                     <img
                         id="imageCardGalleria"
                         src={ImgFondo4} alt="..." />
                     <img
                         id="imageCardGalleria"
                         src={ImgFondo5} alt="..." />
-                    {/* <img
-                        id="imageCardGalleria"
-                        src={ImgFondo6} alt="..." />
-                    <img
-                        id="imageCardGalleria"
-                        src={ImgFondo7} alt="..." />
-                    <img
-                        id="imageCardGalleria"
-                        src={ImgFondo8} alt="..." />
-                    <img
-                        id="imageCardGalleria"
-                        src={ImgFondo9}
-                        alt="..." />
-                    <img
-                        id="imageCardGalleria"
-                        src={ImgFondo10} alt="..." />
-                    <img
-                        id="imageCardGalleria"
-                        src={ImgFondo11} alt="..." />
-                    <img
-                        id="imageCardGalleria"
-                        src={ImgFondo}
-                        alt="..." /> */}
                 </section>
                 
                 <div className='home-container'>
-                    <img  className='logo-home' src={ImgLogo} alt="" />
+                    <p className='logo-home'> WELCOME TO MATE.AR</p>
                 </div>
+                
 
             </div>
         </div>
