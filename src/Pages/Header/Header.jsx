@@ -11,7 +11,6 @@ export default function Header() {
                 <NavBar />
             </div>
             <div>
-               
                 <img className='logo-header' src={ImgHome} alt={ImgHome} />
             </div>
         </div>
