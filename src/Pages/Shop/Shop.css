@@ -25,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 4vh 10vh;
+    padding-top: 2vh;
     gap: 4vh;
     position: relative;
 }

@@ -10,9 +10,7 @@ export default function Shop() {
     const [reload, setReload] = useState(false);
     const dispatch = useDispatch()
 
-
     let productos = useSelector(store => store.productos.productos)
-    //console.log(productos)
     
     useEffect(
         () => {

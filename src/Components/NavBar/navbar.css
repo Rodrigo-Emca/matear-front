@@ -25,3 +25,7 @@
 .carritoCompras{
     width: 30px;
 }
+
+.carritoCompras:hover {
+    transform: rotate(-10deg);
+}

@@ -1,0 +1,26 @@
+.mainContainer{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 2vh;
+    position: relative;
+    /* border: red 2px solid; */
+}
+
+.table{
+    /* border: yellow 2px solid; */
+    width: 90%;
+}
+
+.productImage{
+    width: 50px;
+}
+
+.countContainer{
+    /* border: green 2px solid; */
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
