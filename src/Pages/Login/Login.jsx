@@ -8,8 +8,8 @@ function Login() {
         <>
             <div className='conteiner-login'>
 
-			    <img className="img-form-login" src={MateLogin}alt="login" />
-                
+			    <div className="img-form-login">
+                </div>
 			    <div className='conteiner-form-login'>
                     <FormLogin />
 			    </div>

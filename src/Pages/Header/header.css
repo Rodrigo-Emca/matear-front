@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     background-color: black;
-    z-index: 1
+    
+    
 }
 .logo-header {
     position: absolute;

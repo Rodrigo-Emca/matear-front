@@ -1,7 +1,7 @@
 .container{
     position: relative;
-    /* top: 2vw; */
     display: flex;
+    background-color: #E6E6E6 ;
 }
 
 .filtroPrecios{
@@ -25,8 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 4vh 10vh;
+    padding-top: 2vh;
     gap: 4vh;
     position: relative;
-    background-color: #E6E6E6 ;
 }

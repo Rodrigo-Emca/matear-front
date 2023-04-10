@@ -1,0 +1,10 @@
+.imagenCarrito{
+    width: 30px;
+    height: 30px;
+    background-color: #AA8B56;
+    border: none;
+}
+
+.cart-button.pressed {
+    background-color: red;
+}
