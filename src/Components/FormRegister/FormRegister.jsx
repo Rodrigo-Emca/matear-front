@@ -5,6 +5,7 @@ import Image from "../Image/Image";
 import axios from "axios";
 import Swal from "sweetalert2";
 import google from '../../Img/Google.svg'
+import { NavLink } from "react-router-dom";
 
 export default function Form() {
   const nameRef = useRef();
@@ -128,9 +129,10 @@ export default function Form() {
           </div>
           <p>
             Already have an account?{" "}
-            <a href="#" className="link">
+            
+            <NavLink to={'/signin'} className="link">
               Log in
-            </a>
+            </NavLink>
           </p> 
         </form>
       </div>

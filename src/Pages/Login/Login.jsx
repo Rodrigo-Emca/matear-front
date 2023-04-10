@@ -1,5 +1,5 @@
 import React from 'react';
-import MateLogin from '../../Img/mateLogin.png'
+import MateLogin from '../../Img/imagen-fondo.jpg'
 import FormLogin from '../../Components/FormLogin/FormLogin';
 import './login.css'
 

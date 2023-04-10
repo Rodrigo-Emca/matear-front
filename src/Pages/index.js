@@ -8,13 +8,15 @@ import Cart from "./Cart/Cart.jsx"
 
 import { createBrowserRouter } from "react-router-dom"
 import Home from "./Home/Home.jsx"
+import Index from "./Index/Index.jsx"
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <IndexLayout />,
     children: [
-      { path: '/', element: <Home /> },
+      { path: '/', element: <Index /> },
+      // { path: '/', element: <Home /> },
       { path: "/signup", element: <Register /> },
       { path: "/signin", element: <Login /> },
     ]
