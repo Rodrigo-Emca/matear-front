@@ -89,7 +89,7 @@
     padding: 10px;
   }
 
-  .profile h2 {
+  .profile-2 {
     font-size: 30px;
   }
 
@@ -97,7 +97,7 @@
     font-size: 14px;
   }
 
-  p {
+  .profile-p {
     font-size: 20px;
   }
 }
@@ -116,7 +116,7 @@
     font-size: 12px;
   }
 
-  p {
+  .profile-p {
     font-size: 18px;
   }
 }
