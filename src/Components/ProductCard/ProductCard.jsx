@@ -33,6 +33,7 @@ export default function ProductCard(props) {
                         <h1>{props.product_id.title}</h1>
                         {/* <h5>{description}</h5> */}
                         <p>$ {props.product_id.price} ARS</p>
+                        {/* <p>$ {props.product_id.price.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 3 })} ARS</p> */}
                         <p>Available: {stockText}</p>
                         <div className="contenedorDetails">
                         <Anchor to={`/details/${props.idProduct}`} className="">

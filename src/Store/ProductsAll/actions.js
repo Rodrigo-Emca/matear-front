@@ -8,7 +8,6 @@ const read_all_products = createAsyncThunk(
         let url = `https://matear-back.onrender.com/api/article`
         try{
             let response = await axios.get(url)
-            //console.log(response.data.article)
             return{
                 productos: response.data.article
             }
