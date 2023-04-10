@@ -34,7 +34,9 @@ export default function Form() {
             id: res.data.user._id,
             name: res.data.user.name,
             mail: res.data.user.mail,
-            photo: res.data.user.photo,
+            country: res.data.user.country,
+            address: res.data.user.address,
+            mailing_address: res.data.user.mailing_address,
             admin
           }))
           setInterval(() => window.location.href = '/', 1000)

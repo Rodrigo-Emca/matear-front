@@ -5,6 +5,7 @@ import MainLayout from '../Layouts/MainLayout.jsx'
 import Shop from "./Shop/Shop.jsx"
 import Details from "./Details/Details.jsx"
 import Cart from "./Cart/Cart.jsx"
+import Profile from "./Profile/Profile.jsx"
 
 import { createBrowserRouter } from "react-router-dom"
 import Home from "./Home/Home.jsx"
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       { path: "/shop", element: <Shop /> },
       { path: "/details/:id", element: <Details /> },
       { path: "/shoppingcart", element: <Cart /> },
+      { path: "/profile", element: <Profile/>},
       //   { path: "/*", element: <NotFound /> },
     ]
   }

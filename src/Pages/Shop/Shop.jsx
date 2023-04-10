@@ -34,28 +34,28 @@ export default function Shop() {
 
     return (
         <div className='container'>
-        <div className='filtroPrecios'>
-            <p>Aqui va el filtro por precios</p>
-        </div>
-        <div className='contenedorFiltroYCards'>
-            <TextFilter defaultText={defaultText} onChange={handleChange} />
-            <div className='cont-cards'>
-            {foundProducts ? (
-                filteredProducts.map((productoIndividual) => (
-                <ProductCard
-                    reload={reload}
-                    setReload={setReload}
-                    key={productoIndividual._id}
-                    idProduct={productoIndividual._id}
-                    product_id={productoIndividual.product_id}
-                    photos={productoIndividual.photo}
-                />
-                ))
-            ) : (
-                <p>Not found. But take a look into all our products!</p>
-            )}
+            <div className='filtroPrecios'>
+                <p>Aqui va el filtro por precios</p>
             </div>
-        </div>
+            <div className='contenedorFiltroYCards'>
+                <TextFilter defaultText={defaultText} onChange={handleChange} />
+                <div className='cont-cards'>
+                {foundProducts ? (
+                    filteredProducts.map((productoIndividual) => (
+                    <ProductCard
+                        reload={reload}
+                        setReload={setReload}
+                        key={productoIndividual._id}
+                        idProduct={productoIndividual._id}
+                        product_id={productoIndividual.product_id}
+                        photos={productoIndividual.photo}
+                    />
+                    ))
+                ) : (
+                    <p>Not found. But take a look into all our products!</p>
+                )}
+                </div>
+            </div>
         </div>
     );
 }
