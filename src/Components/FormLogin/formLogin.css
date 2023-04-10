@@ -1,7 +1,7 @@
 .login-fondo{
   background-color: #e6e6e6c7;
   border-radius: 5px;
-  width: 450px;
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +17,9 @@
   width: 250px;
   padding: 4px;
 }
+.email-login:focus, .password-login:focus{
+  animation: input-focus 0.5s forwards;
+}
 .sign-in {
   display: flex;
   justify-content: center;
@@ -31,7 +34,7 @@
   font-weight: 700;
   font-size: 14px;
   border: none;
-  /* margin-bottom: 1rem; */
+  margin-bottom: 10px;
 }
 .sign-in-google {
   display: flex;
@@ -46,7 +49,9 @@
   gap: 0.5rem;
 }
 @media (min-width:768px) and (max-width:1023px){
-
+  .login-fondo{
+    width: 350px;
+  }
 }
 
 @media (min-width:320px) and (max-width:767px){

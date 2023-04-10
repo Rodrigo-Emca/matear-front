@@ -63,11 +63,9 @@ export default function Form() {
   };
 
   return (
-    <div className="register-fondo">
-      <div className="register">
-        
-        <form className="form" onSubmit={handleSubmit}>
-        <Wellcome />
+    <div className="register-dad">
+        <form className="form-register" onSubmit={handleSubmit}>
+          {/* <Wellcome /> */}
           <label>Name</label>
           <input type="text" name="name" id="name" ref={nameRef} required />
 
@@ -133,7 +131,6 @@ export default function Form() {
             </a>
           </p> 
         </form>
-      </div>
     </div>
   );
 }
