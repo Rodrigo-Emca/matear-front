@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './navbar.css';
 import shoppingCartIcon from '../../Img/carrito.png';
 
+
 export default function NavBar() {
     const token = localStorage.getItem('token');
 
@@ -21,6 +22,7 @@ export default function NavBar() {
             {token ? (
             <NavLink to={'/shoppingcart'}>
                 <img src={shoppingCartIcon} alt='Shopping cart icon' className='carritoCompras'/>
+                
             </NavLink>
             ) : (
             <NavLink to={'/signin'} className='link-home'>

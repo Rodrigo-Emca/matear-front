@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './cartButton.css';
 import carritoImg from '../../Img/carrito-de-compras.png';
+import { BiCart } from "react-icons/bi"
 
 export default function CartButton(props) {
 
@@ -48,7 +49,7 @@ export default function CartButton(props) {
 
     return (
         <button onClick={handleClick} className={buttonClass}>
-            <img src={carritoImg} alt="shopping cart" className="imagenCarrito" />
+            <BiCart className='carrito-shop'/>
         </button>
     );
 }

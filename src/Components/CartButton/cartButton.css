@@ -1,10 +1,17 @@
-.imagenCarrito{
-    width: 30px;
-    height: 30px;
-    background-color: #AA8B56;
+.cart-button{
+
+    color: black;
     border: none;
+    background-color: transparent;
+}
+.cart-button.pressed {
+
+    color: red;
+    border: none;
+    background-color: transparent;
 }
 
-.cart-button.pressed {
-    background-color: red;
+.carrito-shop{
+    width: 30px;
+    height: 30px;
 }
