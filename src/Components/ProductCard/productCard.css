@@ -88,8 +88,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
 
+}
+.detail-shop{
+    color: black;
+}
 .favorite-icon {
     position: absolute;
     top: 10px;
