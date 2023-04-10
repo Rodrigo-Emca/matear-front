@@ -84,7 +84,7 @@ export default function Form() {
           
           <div className="buttons-container">
           <div>
-            <button type="submit" className="sign-up">
+            <button type="submit" className="sign-in">
               Sign in
             </button>
           </div>

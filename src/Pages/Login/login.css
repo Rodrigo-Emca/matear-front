@@ -21,35 +21,24 @@
     display: flex;
     width: 50%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
   }
-  /* @media (max-width: 1200px){
-      .conteiner {
-        width: 100%;
-        display: flex;  
-        justify-content: center;
-        
-      }
-      
+  
+  @media (min-width:768px) and (max-width:1023px){
+    .img-form-login{
+      display: none;
     }
-    @media (max-width:720px) {
-      
-      .conteiner {
-        width: 100%;
-        
-        display: flex;  
-        justify-content: center;
-     
-        
-      }
-      .conteiner-form {
-        width: 100%;
-      }
+    .conteiner-form-login{
+      width: 100%;
+    }
+  }
 
-      .conteiner-img {
-       display: none;
-      }
-
-      .img-form{
-        display: none;
-      }
-    } */
+  @media (min-width:320px) and (max-width:767px){
+    .img-form-login{
+      display: none;
+    }
+    .conteiner-form-login{
+      width: 100%;
+    }
+  }
