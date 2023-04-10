@@ -27,9 +27,11 @@ export default function Details() {
 
   const productoSimple = useSelector((store) => store?.producto?.producto);
   console.log(productoSimple);
+  let token = localStorage.getItem('token')
+  console.log(token)
 
   useEffect(() => {
-    dispatch(get_one_product({ id }));
+    dispatch(get_one_product({ id, token }));
   }, [reload]);
 
   const handleClick = (index) => {

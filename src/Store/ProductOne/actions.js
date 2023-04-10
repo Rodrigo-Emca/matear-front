@@ -5,11 +5,12 @@ import axios from "axios";
 const get_one_product = createAsyncThunk(
     'get_one_product',
     async({id, token}) => {
+        console.log(token)
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
         let url = `https://matear-back.onrender.com/api/article/${id}`;
         try{
             let response = await axios.get(url , headers)
-            //console.log(response.data.message)
+            console.log(response.data.message)
             return{
                 producto: response.data.message
             }
