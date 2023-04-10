@@ -27,7 +27,7 @@ export default function Form() {
       [passwordRef.current.name]: passwordRef.current.value,
     };
 
-    let url = "http://localhost:8080/api/auth/signup";
+    let url = "https://matear-back.onrender.com/api/auth/signup";
     console.log(data);
 
     if (data.name.length < 3) {
