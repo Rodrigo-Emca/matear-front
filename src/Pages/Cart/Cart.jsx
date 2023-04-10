@@ -4,7 +4,7 @@ import CarritoComponente from '../../Components/CarritoComponente/CarritoCompone
 
 export default function Cart() {
     return (
-        <div className='container'>
+        <div className='containerCarrito'>
             <CarritoComponente/>
         </div>
     )

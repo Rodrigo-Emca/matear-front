@@ -32,7 +32,8 @@ export default function ProductCard(props) {
                         {/* <img src={logoblack} alt="logo" className='logoMate'/> */}
                         <h1>{props.product_id.title}</h1>
                         {/* <h5>{description}</h5> */}
-                        <p>$ {props.product_id.price} ARS</p>
+                        <p>$ {parseFloat(props.product_id.price).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 3 })} ARS</p>
+                        {/* <p>$ {props.product_id.price} ARS</p> */}
                         {/* <p>$ {props.product_id.price.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 3 })} ARS</p> */}
                         <p>Available: {stockText}</p>
                         <div className="contenedorDetails">
