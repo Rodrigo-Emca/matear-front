@@ -71,12 +71,12 @@ export default function Form() {
 
   return (
     <div className="login-fondo">
-      <div className="login">
+      <div className="register">
        
-        <form className="form-login"  onSubmit={handleSubmit}>
+        <form className="form"  onSubmit={handleSubmit}>
             <Wellcome />
-            <label className="color-white">Email</label>
-            <input className="email-login" type="email" name="mail" id="mail" ref={emailRef}  required />
+            <label className="label">Email</label>
+            <input type="email" name="mail" id="mail" ref={emailRef}  required />
     
          
             <label className="color-white">Password</label>

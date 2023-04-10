@@ -19,12 +19,10 @@
     height: 100%;
     overflow: hidden;
 }
-
 .card .image img {
     width: 100%;
     transition: .5s;
 }
-
 .card:hover .image img {
     opacity: .5;
     transform: translateX(30%);/*100%*/

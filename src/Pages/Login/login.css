@@ -1,19 +1,18 @@
 .conteiner-login {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: #C5A880
+    background-color: black;
   }
   .img-form-login{
     display: flex;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
+    width: 50vw;
+    height: 100vh;
   }
   .conteiner-form-login{
     display: flex;
-    width: 50%;
-    height: 100%;
+    width: 50vw;
+    height: 100vh;
   }
   /* @media (max-width: 1200px){
       .conteiner {
