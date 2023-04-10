@@ -27,7 +27,7 @@ export default function Form() {
       [passwordRef.current.name]: passwordRef.current.value,
     };
 
-    let url = "http://localhost:8080/api/auth/signup";
+    let url = "https://matear-back.onrender.com/api/auth/signup";
     console.log(data);
 
     if (data.name.length < 3) {
@@ -64,11 +64,9 @@ export default function Form() {
   };
 
   return (
-    <div className="register-fondo">
-      <div className="register">
-        
-        <form className="form" onSubmit={handleSubmit}>
-        <Wellcome />
+    <div className="register-dad">
+        <form className="form-register" onSubmit={handleSubmit}>
+          {/* <Wellcome /> */}
           <label>Name</label>
           <input type="text" name="name" id="name" ref={nameRef} required />
 
@@ -135,7 +133,6 @@ export default function Form() {
             </NavLink>
           </p> 
         </form>
-      </div>
     </div>
   );
 }

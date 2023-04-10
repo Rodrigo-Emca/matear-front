@@ -1,31 +1,74 @@
-import React, {useRef,useState,useEffect} from 'react'
+import React, { useRef, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector,useDispatch } from 'react-redux'
-import productAction from '../../Store/ProductOne/actions'
+import { useSelector, useDispatch } from 'react-redux';
+import productAction from '../../Store/ProductOne/actions';
+import './details.css';
 
-const {get_one_product}  = productAction
+const { get_one_product } = productAction;
 
 export default function Details() {
-    const { id } = useParams();
-    const [reload, setReload] = useState(false);
-    const dispatch = useDispatch()
+  const { id } = useParams();
+  const [reload, setReload] = useState(false);
+  const dispatch = useDispatch();
+  const [cantidad, setCantidad] = useState(0);
+ 
+ 
+  const incrementarCantidad = () => {
+    setCantidad(cantidad + 1);
+  };
+  
+  const disminuirCantidad = () => {
+    if (cantidad > 0) {
+      setCantidad(cantidad - 1);
+    }
+    
+  };
+  
 
-    let productoSimple = useSelector(store => store.producto.producto)
-    //console.log(productoSimple)
-    let token = localStorage.getItem('token')
-    useEffect(
-        () => {
-            dispatch(get_one_product({id, token}))
-        },
-        [reload]
-    )
+  const productoSimple = useSelector((store) => store?.producto?.producto);
+  //console.log(productoSimple);
+  let token = localStorage.getItem('token')
+  //console.log(token)
 
-    return (
-        <div>
-        <h1>Details</h1>
-        <p>ID: {productoSimple._id}</p>
-        <p>Nombre del producto: {productoSimple.title}</p>
-        </div>
-    )
+  useEffect(() => {
+    dispatch(get_one_product({ id, token }));
+  }, [reload]);
+
+  const handleClick = (index) => {
+    document.getElementById('main-img').src = productoSimple.photo[index];
+  };
+
+  return (
+    <div className="detail">
+      <div className="main-img-container">
+  <div className="img-zoom-container">
+    <img className="main-img" id="main-img" src={productoSimple?.photo?.[0]} alt="Main product" />
+    <div className="img-zoom" id="img-zoom" />
+  </div>
+</div>
+
+      <div className="gallery-container">
+        {productoSimple.photo &&
+          productoSimple.photo.map((photo, index) => (
+            <div className="gallery-img" key={index} onClick={() => handleClick(index)}>
+              <img src={photo} alt={`imagen ${index}`} className="gallery-img" />
+            </div>
+          ))}
+      </div>
+      <div className="info-detail">
+  <h1>{productoSimple?.product_id?.title}</h1>
+  <p>{productoSimple?.product_id?.description}</p>
+  <p>Stock: <span style={{color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green'}}>{productoSimple?.product_id?.stock}</span></p>
+  <p>Precio: ${productoSimple?.product_id?.price}</p>
+  <p>
+    Cantidad: {cantidad}
+    <button onClick={disminuirCantidad} className="cantidad-btn">-</button>
+    <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
+    <button className="btn-detail">Agregar al carrito</button>
+  </p>
+  <p>Categorias: <span>Mates</span></p>
+</div>
+
+    </div>
+  );
 }
-
