@@ -30,9 +30,9 @@ function Profile() {
   };
 
   return (
-    <div className='background'>
+    <div className='profile-fond'>
     <div className="profile">
-      <h2>Perfil de usuario</h2>
+      <h2 className='profile-h2'>Perfil de usuario</h2>
       {isEditing ? (
         <div className="edit-profile">
           <label>
@@ -90,16 +90,16 @@ function Profile() {
         <>
           {user ? (
             <>
-              <p>
+              <p className='profile-p'>
                 <strong>Nombre:</strong> {user.name}
               </p>
-              <p>
+              <p className='profile-p'>
                 <strong>Correo electrónico:</strong> {user.mail}
               </p>
-              <p>
+              <p className='profile-p'>
                 <strong>País:</strong> {user.country}
               </p>
-              <p>
+              <p className='profile-p'>
                 <strong>Dirección:</strong> {user.address}
               </p>
             </>
