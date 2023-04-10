@@ -5,18 +5,9 @@ import './register.css'
 
 function Register() {
     return (
-		<div>
-          
-			<div className='conteiner'>
-				<div className='conteiner-img'>
-					<img className="img-form" src={MateRegister}alt="login" />
-				</div>
-			<div className='conteiner-form'>
-				<FormRegister />
-			</div>	
-		
+		<div className='cont-register'>    
+			<FormRegister />	
 		</div>
-	</div>
        
     );
 }

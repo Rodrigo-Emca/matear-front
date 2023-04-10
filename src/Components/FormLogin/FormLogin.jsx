@@ -69,41 +69,41 @@ export default function Form() {
 
 }
 
-  return (
-    <div className="login-fondo">
-      <div className="register">
+return (
+  <div className="login-fondo">
+    <div className="login">
+     
+      <form className="form-login"  onSubmit={handleSubmit}>
+          <Wellcome />
+          <label className="color-white">Email</label>
+          <input className="email-login" type="email" name="mail" id="mail" ref={emailRef}  required />
+  
        
-        <form className="form"  onSubmit={handleSubmit}>
-            <Wellcome />
-            <label className="label">Email</label>
-            <input type="email" name="mail" id="mail" ref={emailRef}  required />
-    
-         
-            <label className="color-white">Password</label>
-            <input className="password-login" type="password" name="password" id="password" ref={passwordRef}  required />
-          
-          <div className="buttons-container">
-          <div>
-            <button type="submit" className="sign-up">
-              Sign in
-            </button>
-          </div>
-          <div>
-          <a href="#" className="sign-in-google">
-          <Image src={google} />
-            <span>Sign in with Google</span>
-          </a>
-          </div>
-          </div>
-          <p className="color-white">
-          Don't have an account yet?{" "}
-            <NavLink to={'/signup'} className="link">
-              Register
-            </NavLink>
-          </p>
-         
-        </form>
-      </div>
+          <label className="color-white">Password</label>
+          <input className="password-login" type="password" name="password" id="password" ref={passwordRef}  required />
+        
+        <div className="buttons-container">
+        <div>
+          <button type="submit" className="sign-in">
+            Sign in
+          </button>
+        </div>
+        <div>
+        <a href="#" className="sign-in-google">
+        <Image src={google} />
+          <span>Sign in with Google</span>
+        </a>
+        </div>
+        </div>
+        <p className="color-white">
+        Don't have an account yet?{" "}
+          <NavLink to={'/signup'} className="link">
+            Register
+          </NavLink>
+        </p>
+       
+      </form>
     </div>
-  );
+  </div>
+);
 }
