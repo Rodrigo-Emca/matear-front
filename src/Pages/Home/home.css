@@ -2,8 +2,8 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     min-height: 85vh;
-    padding-bottom: 8px;
-    
+    padding-bottom: 1px;
+
 }
 
 .container-home {
@@ -55,21 +55,23 @@
 }
 
 .logo-home {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30%;
     height: 85vh;
-    background-color: rgb(5, 0, 0);
+    background-color: black;
     color: white;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    padding-top: 20rem;
-    padding-bottom: 18rem;
-    margin-bottom: 2.2rem;
+    z-index: 1;
+    margin-top: -20rem;
+
 }
 
-/* @media (max-width:720px){
+@media (max-width:750px){
     .logo-home{
         display: none;
     }
-} */
+}

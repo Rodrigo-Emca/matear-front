@@ -29,3 +29,9 @@
 .carritoCompras:hover {
     transform: rotate(-10deg);
 }
+
+@media (min-width:320px) and (max-width:750px){
+    .anchor-header{
+        display: none;
+    }
+}
