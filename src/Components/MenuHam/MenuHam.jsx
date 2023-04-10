@@ -72,7 +72,6 @@ export default function MenuHam({ handleRender }) {
                     </NavLink> : ""}
                     {token ? <NavLink to={'/profile'} className='a-menu'>Profile </NavLink> : ""}
                     {token ? <NavLink className='a-menu' onClick={handleLogout}>Logout</NavLink> : ""}
-                    <NavLink className='a-menu'>About Us</NavLink>
                     <NavLink className='a-menu'>Contact</NavLink>
                     {token ? "" : <NavLink to={'/signin'} className='a-menu'> Login </NavLink>}
 
