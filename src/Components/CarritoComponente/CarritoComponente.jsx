@@ -102,7 +102,7 @@ export default function CarritoComponente() {
                         </Anchor>
                     </td>
                     <td>{item.product.product_id.title}</td>
-                    <td>$ {item.product.product_id.price} ARS</td>
+                    <td>$ {parseFloat(item.product.product_id.price).toLocaleString('es-AR')} ARS</td>
                     <td>
                         <StockInfo stock={item.product.product_id.stock} />
                     </td>
@@ -122,7 +122,7 @@ export default function CarritoComponente() {
                 ))}
                 <tr>
                     <td>Total purchase:</td>
-                    <td colSpan="5">$ {calculateTotalPrice()} ARS</td>
+                    <td colSpan="5">$ {parseFloat(calculateTotalPrice()).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 3 })} ARS</td>
                 </tr>
                 </tbody>
             </table>
