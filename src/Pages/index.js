@@ -17,7 +17,6 @@ export const router = createBrowserRouter([
     element: <IndexLayout />,
     children: [
       { path: '/', element: <Index /> },
-      // { path: '/', element: <Home /> },
       { path: "/signup", element: <Register /> },
       { path: "/signin", element: <Login /> },
     ]
@@ -33,7 +32,6 @@ export const router = createBrowserRouter([
       { path: "/details/:id", element: <Details /> },
       { path: "/shoppingcart", element: <Cart /> },
       { path: "/profile", element: <Profile/>},
-      //   { path: "/*", element: <NotFound /> },
     ]
   }
 
