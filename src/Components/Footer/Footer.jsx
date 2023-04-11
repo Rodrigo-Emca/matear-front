@@ -41,7 +41,7 @@ function Footer() {
                     <Image src={mercadopago} alt="MercadoPago" />
                 </div>
                 <div className='termo'>
-                    <Image src={logoMate} alt="Termo" />
+                    <Image src={logoMate} alt="Termo" className="img-logo" />
                 </div>  
                 <div className='contact-us'>
                     <p><Image className='instagram' src={pindemapa}  />BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA - CORDOBA, ARGENTINA</p>

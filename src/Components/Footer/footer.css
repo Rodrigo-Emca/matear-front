@@ -55,8 +55,6 @@
     border-radius: 2%;
   }
   
-  .contact {}
-  
   p {
     color: white;
     font-size: 15px;
@@ -117,4 +115,10 @@
     .section-contact {
         gap: 1rem;
       }
+}
+
+@media (min-width:320px) and (max-width:450px){
+  .img-logo{
+    width: 200px;
+  }
 }
