@@ -58,10 +58,10 @@ export default function NavBar({ handleRender }) {
             <img src={shoppingCartIcon} alt='Shopping cart icon' className='carritoCompras'/>
           </NavLink>
           <NavLink to={'/profile'}>
-          <img src={perfile}  style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='perfilIcon'/>
+          <img src={perfile}  style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='perfil-Icon'/>
           </NavLink>
           <NavLink to={'/home'}>
-          <img src={logout}  style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='perfilIcon'  onClick={handleLogout}/>
+          <img src={logout}  style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='log-out-icon'  onClick={handleLogout}/>
           </NavLink>
         </>
       ) : (
