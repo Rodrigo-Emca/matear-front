@@ -18,7 +18,7 @@ export default function NavBar() {
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
     let url = 'https://matear-back.onrender.com/api/auth/signout'
-
+    let user = JSON.parse(localStorage.getItem('user'))
 
     async function handleLogout() {
         try {
@@ -51,8 +51,8 @@ export default function NavBar() {
                 <NavLink to={'/shop'} className='link-home'> Shop </NavLink>
                 <NavLink className='link-home'>Contact</NavLink>
                 {token ? "" : <NavLink to={'/signin'} className='link-home'>Login </NavLink>}
-
                 <>
+                    {token && user.admin ? <NavLink to={'/newarticle'} className='link-home'> New Product </NavLink> : ""}
                     {token ? <NavLink to={'/shoppingcart'}>
                         <img src={shoppingCartIcon} alt='Shopping cart icon' className='carritoCompras' />
                     </NavLink> : ""}

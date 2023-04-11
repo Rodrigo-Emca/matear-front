@@ -16,6 +16,7 @@ export default function MenuHam({ handleRender }) {
 
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
     let url = 'https://matear-back.onrender.com/api/auth/signout'
+    let user = JSON.parse(localStorage.getItem('user'))
 
     async function handleLogout() {
         try {
@@ -70,6 +71,7 @@ export default function MenuHam({ handleRender }) {
                     {token ? <NavLink to={'/shoppingcart'}>
                         <BiCart className='carrito-hamburguesa' />
                     </NavLink> : ""}
+                    {token && user.admin ? <NavLink to={'/newarticle'} className='a-menu'> New Product </NavLink> : ""}
                     {token ? <NavLink to={'/profile'} className='a-menu'>Profile </NavLink> : ""}
                     {token ? <NavLink className='a-menu' onClick={handleLogout}>Logout</NavLink> : ""}
                     <NavLink className='a-menu'>Contact</NavLink>

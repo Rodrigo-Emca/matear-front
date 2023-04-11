@@ -4,24 +4,39 @@ import axios from "axios";
 
 const get_one_product = createAsyncThunk(
     'get_one_product',
-    async({id, token}) => {
-        //console.log(token)
+    async ({ id, token }) => {
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
         let url = `https://matear-back.onrender.com/api/article/${id}`;
-        try{
-            let response = await axios.get(url , headers)
-            //console.log(response.data.message)
-            return{
+        try {
+            let response = await axios.get(url, headers)
+            return {
                 producto: response.data.message
             }
-        }catch(error){
-            return{
+        } catch (error) {
+            return {
                 producto: []
             }
         }
     }
 )
 
-const actions = {get_one_product}
+const editProduct = createAsyncThunk(
+    'editProduct', async ({ id, headers }) => {
+        try {
+            let response = await axios.put(`https://matear-back.onrender.com/api/products/${id}`, headers)
+           console.log(response)
+            return {
+                article: response.data.response
+            }
+        } catch (error) {
+            return {
+                article:[]
+            }
+        }
+
+    }
+)
+
+const actions = { get_one_product , editProduct }
 
 export default actions
