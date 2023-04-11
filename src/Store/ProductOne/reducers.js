@@ -1,10 +1,11 @@
 import { createReducer } from "@reduxjs/toolkit";
 import productActions from './actions'
 
-const { get_one_product } = productActions
+const { get_one_product, editProduct } = productActions
 
 const initialState = {
-    producto: []
+    producto: [],
+    article: [],
 }
 
 const reducer = createReducer(
@@ -12,14 +13,24 @@ const reducer = createReducer(
     (builder) => builder
         .addCase(
             get_one_product.fulfilled,
-        (state, action) => {
-            let newState = {
-            ...state,
-            producto: action.payload.producto
+            (state, action) => {
+                let newState = {
+                    ...state,
+                    producto: action.payload.producto
+                }
+                return newState
             }
-            return newState
-        }
-    )
+        )
+        .addCase(
+            editProduct.fulfilled,
+            (state, action) => {
+                let newState = {
+                    ...state,
+                    article: action.payload.article
+                }
+                return newState
+            }
+        )
 )
 
 export default reducer

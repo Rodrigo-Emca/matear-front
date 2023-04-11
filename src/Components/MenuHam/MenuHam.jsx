@@ -1,12 +1,45 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import shoppingCartIcon from '../../Img/carrito.png';
 import './menuham.css'
 import { BiCart } from "react-icons/bi"
+import { useDispatch } from "react-redux";
+import logoutActions from '../../Store/LogoutReload/actions';
+import axios from 'axios'
+import Swal from 'sweetalert2'
 
+const { logoutReload } = logoutActions
 
 export default function MenuHam({ handleRender }) {
     const token = localStorage.getItem('token');
+
+    const dispatch = useDispatch();
+
+    let headers = { headers: { 'Authorization': `Bearer ${token}` } }
+    let url = 'https://matear-back.onrender.com/api/auth/signout'
+    let user = JSON.parse(localStorage.getItem('user'))
+
+    async function handleLogout() {
+        try {
+            await axios.post(url, "", headers)
+            Swal.fire({
+                title: 'Logout Succefull',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            })
+            localStorage.removeItem('token')
+            localStorage.removeItem('user')
+            dispatch(logoutReload({ state: true }))
+            window.location.reload();
+        } catch (error) {
+            console.log(error)
+
+        }
+    }
+
 
     return (
         <nav className='nav-container'>
@@ -35,19 +68,15 @@ export default function MenuHam({ handleRender }) {
                     <NavLink to={'/shop'} className='a-menu'>
                         Shop
                     </NavLink>
-                    <NavLink className='a-menu'>About Us</NavLink>
+                    {token ? <NavLink to={'/shoppingcart'}>
+                        <BiCart className='carrito-hamburguesa' />
+                    </NavLink> : ""}
+                    {token && user.admin ? <NavLink to={'/newarticle'} className='a-menu'> New Product </NavLink> : ""}
+                    {token ? <NavLink to={'/profile'} className='a-menu'>Profile </NavLink> : ""}
+                    {token ? <NavLink className='a-menu' onClick={handleLogout}>Logout</NavLink> : ""}
                     <NavLink className='a-menu'>Contact</NavLink>
+                    {token ? "" : <NavLink to={'/signin'} className='a-menu'> Login </NavLink>}
 
-                    {token ? (
-                        <NavLink to={'/shoppingcart'}>
-                           <BiCart className='carrito-hamburguesa'/>
-                        </NavLink>
-                    ) : (
-                        <NavLink to={'/signin'} className='a-menu'>
-                            Login
-                        </NavLink>
-                    )}
-                    <a className='a-menu' href="">Logout</a>
                 </div>
             </div>
         </nav>
