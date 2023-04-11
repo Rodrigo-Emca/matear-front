@@ -27,17 +27,13 @@ export default function ProductCard(props) {
                 <div className="details">
                     <div className="center">
                         <h1>{props.product_id.title}</h1>
-                        {/* <h5>{description}</h5> */}
                         <p>$ {parseFloat(props.product_id.price).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 3 })} ARS</p>
-                        {/* <p>$ {props.product_id.price} ARS</p> */}
-                        {/* <p>$ {props.product_id.price.toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 3 })} ARS</p> */}
                         <p>Available: {stockText}</p>
                         <div className="contenedorDetails">
                         <Anchor to={`/details/${props.idProduct}`} className="detail-shop">
                             Details
                         </Anchor>
                         {props.product_id.stock !== 0 && <CartButton product={props} />}
-                        {/* <img src={favoriteIcon} alt='favorite icon' className='favorite-icon' /> */}
                         </div>
                     </div>
                 </div>
