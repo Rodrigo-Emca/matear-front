@@ -14,7 +14,7 @@ export default function EditProduct() {
     let categories = useSelector(store => store.categories.categories)
 
     const [article, setArticle] = useState({
-      
+       
     })
 
     useEffect(() => {

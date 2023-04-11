@@ -18,7 +18,7 @@ function Footer() {
                 <div className='map'>
                 <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.47497046794!2d-58.59811171411622!3d-34.61543034822564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1680809010312!5m2!1ses!2sar" 
-                width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div className='description'>
                 <p id='wellcome'>Welcome to our website, where we are proud to offer the highest quality thermos and mate products on the market.
