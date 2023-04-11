@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './cartButton.css';
-import carritoImg from '../../Img/carrito-de-compras.png';
 import { BiCart } from "react-icons/bi"
 
 export default function CartButton(props) {
+    //console.log(props.product)
 
     const [pressed, setPressed] = useState(false);
 
@@ -22,7 +22,6 @@ export default function CartButton(props) {
         if (cartItems) {
             let itemExists = false;
 
-            // Check if item already exists in cart
             existingKeys.forEach((key) => {
                 const item = JSON.parse(localStorage.getItem(key));
                 if (item.product.idProduct === props.product.idProduct) {

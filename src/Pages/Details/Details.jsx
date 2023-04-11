@@ -66,7 +66,7 @@ export default function Details() {
     <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
     <button className="btn-detail">Agregar al carrito</button>
   </p>
-  <p>Categorias: <span>Mates</span></p>
+  <p>Categorias: <span>{productoSimple.product_id.category_id}</span></p>
 </div>
 
     </div>
