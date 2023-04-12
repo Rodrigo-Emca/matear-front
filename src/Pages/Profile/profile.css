@@ -59,13 +59,19 @@
     font-size: 16px;
     font-weight: bold;
   }
+  .profile-2 {
+    font-size: 30px;
+  }
   
   .btn-save {
     background-color: #5cb85c;
   }
   
   .btn-cancel {
-    background-color: #d9534f;
+    background-color: #d9534f;}
+
+  .profile-p {
+    font-size: 20px;
   }
   
   .btn-edit {
@@ -77,7 +83,13 @@
   }
   
   .profile-p{
-    color: rgb(9, 8, 8);
+    color: rgb(9, 8, 8);}
+
+  .edit-profile input[type="text"] {
+    font-size: 12px;
+  }
+
+  .profile-p {
     font-size: 18px;
     align-self: start
   }

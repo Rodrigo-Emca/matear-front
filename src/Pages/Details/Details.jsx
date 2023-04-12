@@ -48,6 +48,24 @@ export default function Details() {
     document.getElementById('main-img').src = productoSimple.photo[index];
   };
 
+  function getCategoryName(value) {
+    switch (value) {
+      case '642eeb2e9872d9f2ccaf55b3':
+        return 'mates';
+      case '642eeb2e9872d9f2ccaf55b4':
+        return 'thermos';
+      case '642eeb2e9872d9f2ccaf55b5':
+        return 'strawbulbs';
+      case '642eeb2e9872d9f2ccaf55b6':
+        return 'accessories';
+      case '642eeb2e9872d9f2ccaf55b7':
+        return 'mate carriers';
+      default:
+        return '';
+    }
+  }
+  // console.log(productoSimple.product_id.category_id);
+  // console.log(getCategoryName(productoSimple.product_id.category_id))
   return (
     <div className="detail">
       <div className="main-img-container">
@@ -76,7 +94,7 @@ export default function Details() {
           <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
           <button className="btn-detail">Agregar al carrito</button>
         </p>
-        <p>Categorias: <span>Mates</span></p>
+        <p>Categorias: <span>{productoSimple.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
         {token && user.admin ? <NavLink to={`/products/${productoSimple?.product_id?._id}`}  >
           <AiFillEdit className='fillEdit' />
         </NavLink> : ""}

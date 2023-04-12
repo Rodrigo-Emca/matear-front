@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./formRegister.css";
-import Wellcome from "../Wellcome/Wellcome";
+// import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -68,22 +68,22 @@ export default function Form() {
         <form className="form-register" onSubmit={handleSubmit}>
           {/* <Wellcome /> */}
           <label>Name</label>
-          <input type="text" name="name" id="name" ref={nameRef} required />
+          <input className="register-name" type="text" name="name" id="name" ref={nameRef} required />
 
           <label>Email</label>
-          <input type="email" name="mail"  ref={emailRef} required />
+          <input className="register-email" type="email" name="mail"  ref={emailRef} required />
 
           <label>Password</label>
           <input
             type="password"
             name="password"
-           
+            className="register-password"
             ref={passwordRef}
             required
           />
 
           <label>Country</label>
-          <input
+          <input className="register-country"
             type="text"
             name="country"
             id="country"
@@ -92,10 +92,10 @@ export default function Form() {
           />
 
           <label>Address</label>
-          <input type="text" name="address" ref={addressRef} required />
+          <input className="register-address" type="text" name="address" ref={addressRef} required />
 
           <label>Mailing Address</label>
-          <input
+          <input className="register-mailing-address"
             type="text"
             name="mailing_address"
             ref={mailing_addressRef}
@@ -121,14 +121,14 @@ export default function Form() {
             <div>
               <a href="#" className="sign-in-google">
                 <Image src={google} />
-                <span>Sign in with Google</span>
+                <span className="color-black">Sign in with Google</span>
               </a>
             </div>
           </div>
           <p>
             Already have an account?{" "}
             
-            <NavLink to={'/signin'} className="link">
+            <NavLink to={'/signin'} className="ancor-register">
               Log in
             </NavLink>
           </p> 
