@@ -3,7 +3,7 @@ import actions from "./actions";
 const { captureChecks } = actions
 
 const initialState = {
-    category: "",
+    category: [],
 }
 
 const reducer = createReducer(initialState, (builder) =>

@@ -17,13 +17,7 @@ export default function Details() {
   let token = localStorage.getItem('token')
   let user = JSON.parse(localStorage.getItem('user'))
   const productoSimple = useSelector((store) => store?.producto?.producto);
-  let categories = useSelector(store => store.categories.categories)
   
-  // console.log(categories,'soy categoria')
-  // // console.log(productoSimple,'soy el producto')
-  // let prod = productoSimple.product_id?.category_id
-  // console.log(prod, 'producto')
-  // // console.log(cate,'soy categoria')
  
   const incrementarCantidad = () => {
     setCantidad(cantidad + 1);
