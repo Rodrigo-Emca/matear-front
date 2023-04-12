@@ -10,7 +10,7 @@ export default function Home() {
         <div className='container-princ'>
 
             <div className='container-home'>
-                <section class="seccion-final">
+                <section className="seccion-final">
                     <img
                         id="imageCardGalleria"
                         src={ImgFondo}
