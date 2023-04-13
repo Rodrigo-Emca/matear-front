@@ -5,22 +5,38 @@ import { useSelector, useDispatch } from 'react-redux';
 import productsActions from '../../Store/ProductsAll/actions';
 import textActions from '../../Store/Search/actions';
 import TextFilter from '../../Components/TextFilter/TextFilter';
+import categoriesActions from '../../Store/Categories/actions'
+import checkActions from '../../Store/Checks/actions'
 
 const { read_all_products } = productsActions;
 const { captureText } = textActions;
+const { read_all_categories } = categoriesActions
+// const { captureChecks } = checkActions
+
 
 export default function Shop() {
-    const [reload, setReload] = useState(false);
     const dispatch = useDispatch();
     const title = useRef('');
-
+    
+    const [reload, setReload] = useState(false);
+    const [categories, setCategories] = useState(null)
+    
+    const category = useSelector(store => store.categories.categories)
     const productos = useSelector((store) => store.productos.productos);
     const defaultText = useSelector((store) => store.text.text);
+    const check = useSelector(store=> store.checks.category)
+
+    //console.log(productos[0].product_id.category_id)
+    //console.log(productos[0])
 
     useEffect(() => {
         dispatch(read_all_products());
     }, [reload]);
+    useEffect(() => {
+        dispatch(read_all_categories());
+    }, []);
 
+    //Para FILTRO TEXTO
     function handleChange(event) {
         setReload(!reload);
         dispatch(captureText({ inputText: event.target.value }));
@@ -31,6 +47,9 @@ export default function Shop() {
     );
 
     const foundProducts = filteredProducts.length > 0;
+    console.log(filteredProducts)
+
+    // Para checkbox
 
     return (
         <div className='container'>
@@ -39,21 +58,30 @@ export default function Shop() {
             </div>
             <div className='contenedorFiltroYCards'>
                 <TextFilter defaultText={defaultText} onChange={handleChange} />
+
+                {category.map(item => {
+                    return (
+                        <>
+                            <input type="checkbox" name="category" value={item._id} key={item._id} />
+                            <span className="category-label">{item.name}</span>
+                        </>
+                    )
+                })}
                 <div className='cont-cards'>
-                {foundProducts ? (
-                    filteredProducts.map((productoIndividual) => (
-                    <ProductCard
-                        reload={reload}
-                        setReload={setReload}
-                        key={productoIndividual._id}
-                        idProduct={productoIndividual._id}
-                        product_id={productoIndividual.product_id}
-                        photos={productoIndividual.photo}
-                    />
-                    ))
-                ) : (
-                    <p>Not found. But take a look into all our products!</p>
-                )}
+                    {foundProducts ? (
+                        filteredProducts.map((productoIndividual) => (
+                            <ProductCard
+                                reload={reload}
+                                setReload={setReload}
+                                key={productoIndividual._id}
+                                idProduct={productoIndividual._id}
+                                product_id={productoIndividual.product_id}
+                                photos={productoIndividual.photo}
+                            />
+                        ))
+                    ) : (
+                        <p>Not found. But take a look into all our products!</p>
+                    )}
                 </div>
             </div>
         </div>

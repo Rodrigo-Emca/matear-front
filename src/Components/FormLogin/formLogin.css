@@ -48,6 +48,12 @@
   border-radius: 8px;
   gap: 0.5rem;
 }
+.color-black{
+  color: black;
+}
+.ancor-register{
+  color: green;
+}
 @media (min-width:768px) and (max-width:1023px){
   .login-fondo{
     width: 350px;

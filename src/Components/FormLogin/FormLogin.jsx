@@ -93,13 +93,13 @@ return (
         <div>
         <a href="#" className="sign-in-google">
         <Image src={google} />
-          <span>Sign in with Google</span>
+          <span className="color-black">Sign in with Google</span>
         </a>
         </div>
         </div>
         <p className="color-white">
         Don't have an account yet?{" "}
-          <NavLink to={'/signup'} className="link">
+          <NavLink to={'/signup'} className="ancor-register">
             Register
           </NavLink>
         </p>

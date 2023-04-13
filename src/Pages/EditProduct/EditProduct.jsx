@@ -12,9 +12,13 @@ export default function EditProduct() {
     const { id } = useParams()
     const dispatch = useDispatch()
     let categories = useSelector(store => store.categories.categories)
-
     const [article, setArticle] = useState({
-      
+        title: "",
+        cover_photo: "",
+        category_id: "",
+        description: "",
+        stock: "",
+        price: "",
     })
 
     useEffect(() => {
@@ -23,7 +27,24 @@ export default function EditProduct() {
 
     async function handleSubmit() {
         // e.preventDefault()
-
+        if (article.title === "") {
+            delete article.title
+        }
+        if (article.cover_photo === "") {
+            delete article.cover_photo
+        }
+        if (article.category_id === "") {
+            delete article.category_id
+        }
+        if (article.description === "") {
+            delete article.description
+        }
+        if (article.stock === "") {
+            delete article.stock
+        }
+        if (article.price === "") {
+            delete article.price
+        }
 
         let token = localStorage.getItem('token')
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
