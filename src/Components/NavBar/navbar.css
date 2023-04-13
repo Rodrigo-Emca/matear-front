@@ -2,7 +2,8 @@
     display: flex;
     gap: 25px;
     margin-top: 10px;
-    width: 480px;
+    max-width: 480px;
+    padding-right: 10px;
 }
 
 .anchor-header .link-home {
