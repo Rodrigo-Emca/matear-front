@@ -30,8 +30,6 @@ export default function Details() {
 
   };
 
-
-
   useEffect(() => {
     dispatch(get_one_product({ id, token }));
     dispatch(read_all_categories({}))
@@ -78,21 +76,21 @@ export default function Details() {
           ))}
       </div>
       <div className="info-detail">
-        <h1>{productoSimple?.product_id?.title}</h1>
-        <p>{productoSimple?.product_id?.description}</p>
-        <p>Stock: <span style={{ color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green' }}>{productoSimple?.product_id?.stock}</span></p>
-        <p>Precio: ${productoSimple?.product_id?.price}</p>
-        <p>
-          Cantidad: {cantidad}
-          <button onClick={disminuirCantidad} className="cantidad-btn">-</button>
-          <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
-          <button className="btn-detail">Agregar al carrito</button>
-        </p>
-        <p>Categorias: <span>{productoSimple.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
-        {token && user.admin ? <NavLink to={`/products/${productoSimple?.product_id?._id}`}  >
+  <h1>{productoSimple?.product_id?.title}</h1>
+  <p>{productoSimple?.product_id?.description}</p>
+  <p>Stock: <span style={{color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green'}}>{productoSimple?.product_id?.stock}</span></p>
+  <p>Precio: ${productoSimple?.product_id?.price}</p>
+  <p>
+    Cantidad: {cantidad}
+    <button onClick={disminuirCantidad} className="cantidad-btn">-</button>
+    <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
+    <button className="btn-detail">Agregar al carrito</button>
+  </p>
+  <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
+  {token && user.admin ? <NavLink to={`/products/${productoSimple?.product_id?._id}`}  >
           <AiFillEdit className='fillEdit' />
         </NavLink> : ""}
-      </div>
+</div>
 
     </div>
   );
