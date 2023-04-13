@@ -62,8 +62,6 @@ export default function Shop() {
                 <p>Aqui va el filtro por precios</p>
             </div>
             <div className='contenedorFiltroYCards'>
-                <TextFilter defaultText={filter.condition} onChange={handleChange} />
-
                 {category.map(item => {
                     return (
                         <>
@@ -72,6 +70,8 @@ export default function Shop() {
                         </>
                     )
                 })}
+                <TextFilter defaultText={filter.condition} onChange={handleChange} />
+
                 <div className='cont-cards'>
                     {productos.length > 0 ? (
                         productos.map((productoIndividual) => (
