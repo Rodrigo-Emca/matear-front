@@ -30,8 +30,6 @@ export default function Details() {
 
   };
 
-
-
   useEffect(() => {
     dispatch(get_one_product({ id, token }));
     dispatch(read_all_categories({}))
@@ -89,6 +87,9 @@ export default function Details() {
     <button className="btn-detail">Agregar al carrito</button>
   </p>
   <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
+  {token && user.admin ? <NavLink to={`/products/${productoSimple?.product_id?._id}`}  >
+          <AiFillEdit className='fillEdit' />
+        </NavLink> : ""}
 </div>
 
     </div>
