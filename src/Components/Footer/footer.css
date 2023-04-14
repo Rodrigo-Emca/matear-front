@@ -21,7 +21,8 @@
 iframe {
   width: 400px;
   height: 350px;
-  border-radius: 3%;
+  border-radius: 20px;
+  border: 1px solid #C5A880;
 }
 
 .description {
@@ -45,7 +46,7 @@ a {
 }
 
 #wellcome {
-  width: 500px;
+  max-width: 500px;
   color: black;
   padding: 1rem;
   font-size: 20px;
@@ -88,7 +89,7 @@ p {
 .contact-us {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   color: white;
   background-color: rgba(77, 82, 82, 0.132);
   border-radius: 5%;
@@ -100,12 +101,18 @@ p {
 .contact-us .anchor {
   margin: 0.5rem 0;
 }
-
+.icon-ubicacion{
+  width: 12px;
+}
 .instagram {
   margin-right: 0.2rem;
   padding-top: 0.3rem;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  /* height: 20px; */
+  object-fit: cover;
+}
+.icon-reloj{
+  width: 16px;
 }
 
 @media (max-width: 750px) {
@@ -117,6 +124,18 @@ p {
 @media (min-width: 320px) and (max-width: 450px) {
   .img-logo {
     width: 200px;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  #wellcome{
+    font-size: 1rem;
+  }
+  iframe{
+    width: 300px;
+    height: 300px;
+  }
+  .map{
+    width: 310px;
   }
 }
 

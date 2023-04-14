@@ -41,9 +41,9 @@ function Footer() {
           <Anchor className="anchor" to="./about-us">
             About Us
           </Anchor>
-          <Anchor className="anchor" to="./contact">
+          {/* <Anchor className="anchor" to="./contact">
             Contact
-          </Anchor>
+          </Anchor> */}
           <Anchor className="anchor" to="./whole-saler">
             WholeSaler
           </Anchor>
@@ -58,7 +58,7 @@ function Footer() {
         </div>
         <div className="contact-us">
           <p>
-            <Image className="instagram" src={pindemapa} />
+            <Image className="icon-ubicacion" src={pindemapa} />
             BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA - CORDOBA, ARGENTINA
           </p>
           <p>
@@ -71,7 +71,7 @@ function Footer() {
             Aquí el texto que desees que aparezca
           </a>
           <p>
-            <Image className="instagram" src={reloj} />
+            <Image className="icon-reloj" src={reloj} />
             10-21hs LUNES A VIERNES / 10-20hs SABADOS
           </p>
           <Anchor to="">
