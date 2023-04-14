@@ -4,6 +4,7 @@ import './productCard.css';
 import CartButton from '../CartButton/CartButton';
 
 export default function ProductCard(props) {
+    const token = localStorage.getItem('token');
     const description =
         props.product_id.description.length > 135
         ? `${props.product_id.description.slice(0, 135)} (...)`
@@ -33,7 +34,7 @@ export default function ProductCard(props) {
                         <Anchor to={`/details/${props.idProduct}`} className="detail-shop" >
                             Details
                         </Anchor>
-                        {props.product_id.stock !== 0 && <CartButton product={props} />}
+                        {token && props.product_id.stock !== 0 && <CartButton product={props} />}
                         </div>
                     </div>
                 </div>
