@@ -108,7 +108,9 @@
 .buscar input:focus{
     width: 215px;
 }
-
+.not-found-color{
+    color: black;
+}
 
 @media (min-width: 320px) and (max-width: 599px){
     /* .container-shop{
