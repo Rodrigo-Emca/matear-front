@@ -88,7 +88,7 @@ export default function Shop() {
                             />
                         ))
                     ) : (
-                        <p>Not found. But take a look into all our products!</p>
+                        <p className='not-found-color'>Not found. But take a look into all our products!</p>
                     )}
                 </div>
             </div>
