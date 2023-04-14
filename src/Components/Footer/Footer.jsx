@@ -2,9 +2,9 @@ import React from "react";
 import "./footer.css";
 import Image from "../Image/Image";
 import { Link as Anchor } from "react-router-dom";
-import logoMate from "../../Img/LOGO-MATEAR-BLANCO.png";
+import logoMate from "../../Img/logo-matear-no-borders-white.png";
 import mercadopago from "../../Img/mercadopago.png";
-import paypal from "../../Img/paypal.png";
+// import paypal from "../../Img/paypal.png";
 import instagram from "../../Img/instagram.png";
 import telefono from "../../Img/telefono.png";
 import pindemapa from "../../Img/pindemapa.png";
@@ -34,6 +34,9 @@ function Footer() {
         </div>
       </div>
       <div className="section-contact">
+          <div className="termo">
+            <Image src={logoMate} alt="Termo" className="img-logo" />
+          </div>
         <div className="anchors-pages">
           <Anchor className="anchor" to="./store">
             Shop
@@ -50,32 +53,34 @@ function Footer() {
         </div>
         <div className="pay">
           <p>Payment Methods</p>
-          <Image src={paypal} alt="Paypal" />
+          {/* <Image src={paypal} alt="Paypal" /> */}
           <Image src={mercadopago} alt="MercadoPago" />
         </div>
-        <div className="termo">
-          <Image src={logoMate} alt="Termo" className="img-logo" />
-        </div>
         <div className="contact-us">
-          <p>
+          <div className="cont-footer-contact">
             <Image className="icon-ubicacion" src={pindemapa} />
-            BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA - CORDOBA, ARGENTINA
-          </p>
-          <p>
-            {" "}
+            <p>
+              BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA
+            </p>
+          </div>
+          <div className="cont-footer-contact">
             <Image className="instagram" src={telefono} />
-            +03355626587
-          </p>
-          <a href="mailto:elcorreoquedesees@correo.com">
-            <Image className="instagram" src={correo} />
-            Aquí el texto que desees que aparezca
+            <p>
+              +03355626587
+            </p>
+            </div>
+          <a href="mailto:elcorreoquedesees@correo.com" className="cont-footer-contact">
+            <Image className="icon-correo" src={correo} />
+            elcorreoquedesees@correo.com
           </a>
-          <p>
+          <div className="cont-footer-contact">
             <Image className="icon-reloj" src={reloj} />
-            10-21hs LUNES A VIERNES / 10-20hs SABADOS
-          </p>
-          <Anchor to="">
-            <Image className="instagram" src={instagram} /> @mateAr{" "}
+            <p>
+              10-21hs LUNES A VIERNES / 10-20hs SABADOS
+            </p>
+          </div>
+          <Anchor to="" className="cont-footer-contact" >
+            <Image className="icon-instagram" src={instagram} /> @mateAr{" "}
           </Anchor>
         </div>
       </div>

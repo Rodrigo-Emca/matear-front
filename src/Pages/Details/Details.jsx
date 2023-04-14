@@ -81,9 +81,6 @@ export default function Details() {
   <p>Stock: <span style={{color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green'}}>{productoSimple?.product_id?.stock}</span></p>
   <p>Precio: ${productoSimple?.product_id?.price}</p>
   <p>
-    Cantidad: {cantidad}
-    <button onClick={disminuirCantidad} className="cantidad-btn">-</button>
-    <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
     <button className="btn-detail">Agregar al carrito</button>
   </p>
   <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
