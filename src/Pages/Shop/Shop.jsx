@@ -21,12 +21,12 @@ export default function Shop() {
         categories: [],
     })
 
-
     function handleChange(event) {
         setFilter({
             ...filter,
             condition: event.target.value
         })
+        console.log(filter)
     }
 
     const handleCategories = (value) => {

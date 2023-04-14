@@ -26,7 +26,6 @@ export default function Details() {
     if (cantidad > 0) {
       setCantidad(cantidad - 1);
     }
-
   };
 
   useEffect(() => {
@@ -55,8 +54,7 @@ export default function Details() {
         return '';
     }
   }
-  // console.log(productoSimple.product_id.category_id);
-  // console.log(getCategoryName(productoSimple.product_id.category_id))
+
   return (
     <div className="detail">
       <div className="main-img-container">
@@ -78,14 +76,11 @@ export default function Details() {
         <h1>{productoSimple?.product_id?.title}</h1>
         <p>{productoSimple?.product_id?.description}</p>
         <p>Stock: <span style={{color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green'}}>{productoSimple?.product_id?.stock}</span></p>
-        <p>Precio: ${productoSimple?.product_id?.price}</p>
-        <p>
-          Cantidad: {cantidad}
-          <button onClick={disminuirCantidad} className="cantidad-btn">-</button>
-          <button onClick={incrementarCantidad} className="cantidad-btn">+</button>
-          <button className="btn-detail">Agregar al carrito</button>
-        </p>
-        <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
+        <p>Price: ${productoSimple?.product_id?.price}</p>
+        <p>Category: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
+        {token && user.admin ? <NavLink to={`/products/${productoSimple?.product_id?._id}`}  >
+                <AiFillEdit className='fillEdit' />
+              </NavLink> : ""}
       </div>
     </div>
   );

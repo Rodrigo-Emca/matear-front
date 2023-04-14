@@ -4,6 +4,8 @@ import './productCard.css';
 import CartButton from '../CartButton/CartButton';
 
 export default function ProductCard(props) {
+    // console.log(props.product_id.cover_photo)
+    // console.log(props.photos[0])
     const description =
         props.product_id.description.length > 135
         ? `${props.product_id.description.slice(0, 135)} (...)`
