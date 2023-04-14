@@ -3,9 +3,10 @@ import "./formLogin.css";
 import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
 import axios from "axios";
-import Swal from 'sweetalert2'
 import google from '../../Img/Google.svg'
 import { NavLink } from "react-router-dom";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 export default function Form() {
   
@@ -41,32 +42,22 @@ export default function Form() {
           }))
           setInterval(() => window.location.href = '/', 1000)
         })
-        Swal.fire({
-          titleText: 'Loggin success',
-          icon: 'success',
-          confirmButtonText: 'Ok',
-          background: 'black',
-          customClass: {
-            title: 'text-white',
-            confirmButton: 'bg-green-500'
-          },
-          confirmButtonStyles: {
-            background: 'red',
-            color: 'white'
-          }
-        });
-        
-
-        
+        toast.success('Loggin success')
+       
+       
         event.target.reset()
     } catch(error) {
-        console.log(error)
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Wrong Credentials! ',
-          
-        })
+       
+        if (error.response.data === 'Unauthorized') {
+          toast.error('You need to Login')
+      } else {
+          if (typeof error.response.data.message === 'string') {
+              toast.error(error.response.data.message)
+          } else {
+              error.response.data.message.forEach(err => toast.error(err))
+          }
+
+      }
     }
 
 }
@@ -106,6 +97,7 @@ return (
        
       </form>
     </div>
+    <Toaster />
   </div>
 );
 }
