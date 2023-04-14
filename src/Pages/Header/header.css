@@ -4,9 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
-    
-    
+    background: linear-gradient(to top, #000000, #000000c7); 
 }
 .logo-header {
     display: flex;

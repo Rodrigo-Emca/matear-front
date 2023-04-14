@@ -11,6 +11,7 @@
     transform: translate(-50%,-50%);
     width: 280px;
     height: 280px;
+    box-shadow: 0 0 8px black;
     /* background: #000; */
 }
 
@@ -22,13 +23,18 @@
 .card .image img {
     width: 100%;
     transition: .5s;
-    border: 1px solid darkolivegreen;
+    border: 1px solid #C5A880;
 }
 .card:hover .image img {
     opacity: .5;
     transform: translateX(30%);/*100%*/
 }
-
+.detail-shop:hover{
+    background-color: rgba(255, 255, 255, 0.564);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .card .details {
     /* border-right: black solid 1px; */
     position: absolute;
@@ -40,6 +46,7 @@
     transition: .5s;
     transform-origin: left;
     transform: perspective(2000px) rotateY(-90deg);
+    box-shadow: 0 1 2 black;
 }
 .card:hover .details {
     transform: perspective(2000px) rotateY(0deg);
