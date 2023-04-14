@@ -1,0 +1,63 @@
+.anchor-header {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+    max-width: 480px;
+    padding-right: 10px;
+}
+
+.anchor-header .link-home {
+    height: 30px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+
+}
+
+.anchor-header .link-home:hover {
+    color: white;
+    /* background-color: white;
+    height: 35px;
+    padding: 5px; */
+    border-bottom: 2px solid white ;
+}
+
+.carritoCompras{
+    width: 30px;
+}
+
+.carritoCompras:hover {
+    transform: rotate(-10deg);
+}
+
+.perfilIcon:hover{
+    animation: shake-harder 2.0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake-harder {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-5px, 0) rotate(-5deg); }
+    20% { transform: translate(5px, 0) rotate(5deg); }
+    30% { transform: translate(-5px, 0) rotate(-5deg); }
+    40% { transform: translate(5px, 0) rotate(5deg); }
+    50% { transform: translate(-5px, 0) rotate(-5deg); }
+    60% { transform: translate(5px, 0) rotate(5deg); }
+    70% { transform: translate(-5px, 0) rotate(-5deg); }
+    80% { transform: translate(5px, 0) rotate(5deg); }
+    90% { transform: translate(-5px, 0) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+
+@media (min-width:320px) and (max-width:750px){
+    .anchor-header{
+        display: none;
+    }
+}
+@media (min-width:750px) and (max-width:1100px){
+    .anchor-header{
+        padding-right: 5px;
+    }
+}

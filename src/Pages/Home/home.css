@@ -1,0 +1,92 @@
+.container-princ {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 85vh;
+    padding-bottom: 1px;
+
+}
+
+.container-home {
+    width: 100%;
+    min-height: 85vh;
+    background-color: white;
+}
+
+.seccion-final {
+    display: flex;
+    width: 100%;
+    height: 20rem;
+}
+
+.seccion-final img {
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.seccion-final:hover {
+    width: 100%;
+    opacity: 1;
+    filter: contrast(120%);
+    object-fit: cover;
+
+}
+
+#imageCardGalleria {
+    width: 50%;
+    height: 85vh;
+    object-fit: cover;
+    overflow-x: hidden;
+}
+
+#imageCardGalleria:hover {
+    width: 70%;
+    transform: scale(1);
+    opacity: 2;
+    filter: contrast(120%);
+
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* height: 85vh; */
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.589);
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    z-index: 1;
+    margin-top: -20rem;
+}
+.seccion-final::after {
+    content: "POKEMON";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+.seccion-final:hover::after{
+    opacity: 1;
+}
+
+@media (max-width:750px){
+    .logo-home{
+        display: none;
+    }
+}

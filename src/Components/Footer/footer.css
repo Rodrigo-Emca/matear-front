@@ -1,0 +1,171 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.section-map-desc {
+  display: flex;
+  background-color: #E6E6E6;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+.map{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: 370px;
+}
+
+iframe {
+  width: 350px;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid #C5A880;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+
+}
+
+.section-contact {
+  display: flex;
+  flex-wrap: wrap;
+  background: black;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#wellcome {
+  max-width: 500px;
+  color: black;
+  padding: 1rem;
+  font-size: 18px;
+  text-align: center;
+  /* background-color: #e6e6e6;
+  border-radius: 20px; */
+}
+
+p {
+  color: white;
+  font-size: 15px;
+}
+.anchors-pages {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.anchor {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.anchor:hover {
+  color: #3fb890;
+  transition: 0.3s;
+}
+
+.pay {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.pay p {
+  font-size: 20px;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  color: white;
+  background-color: rgba(77, 82, 82, 0.132);
+  border-radius: 5%;
+  padding: 2.5rem;
+}
+
+.contact-us p,
+.contact-us a,
+.contact-us .anchor {
+  margin: 0.5rem 0;
+}
+.img-logo {
+  width: 230px;
+  padding: 10px;
+}
+.icon-ubicacion{
+  width: 12px;
+}
+.instagram {
+  margin-right: 0.2rem;
+  padding-top: 0.3rem;
+  width: 10px;
+  /* height: 20px; */
+  object-fit: cover;
+}
+.icon-reloj{
+  width: 20px;
+  object-fit: cover;
+}
+.icon-correo{
+  width: 20px;
+  object-fit: cover;
+}
+.icon-instagram{
+  width: 20px;
+  object-fit: cover;
+}
+.cont-footer-contact{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 750px) {
+  .section-contact {
+    gap: 1rem;
+  }
+}
+
+/* @media (min-width: 320px) and (max-width: 450px) {
+  .img-logo {
+    width: 200px;
+  }
+} */
+@media (min-width: 320px) and (max-width: 500px) {
+  iframe{
+    width: 300px;
+    height: 300px;
+  }
+  .map{
+    width: 310px;
+  }
+  .contact-us{
+    background-color: transparent;
+    width: 300px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
+  .section-map-desc{
+    flex-direction: column;
+  }
+  #wellcome{
+    font-size: 1rem;
+  }
+}

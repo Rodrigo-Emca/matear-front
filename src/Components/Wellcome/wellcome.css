@@ -1,0 +1,26 @@
+.welcome-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.logo-size{
+  width: 250px;
+}
+
+
+/* @media (max-width: 1024px) {
+  .welcome-section {
+    padding-top: 50px;
+  }
+}
+  @media (max-width: 720px) {
+
+  }
+   */
+
+
+
+
+

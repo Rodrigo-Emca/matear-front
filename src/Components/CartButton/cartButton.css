@@ -1,0 +1,17 @@
+.cart-button{
+
+    color: black;
+    border: none;
+    background-color: transparent;
+}
+.cart-button.pressed {
+
+    color: red;
+    border: none;
+    background-color: transparent;
+}
+
+.carrito-shop{
+    width: 30px;
+    height: 30px;
+}
