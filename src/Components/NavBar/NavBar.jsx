@@ -5,9 +5,9 @@ import shoppingCartIcon from '../../Img/carrito.png';
 import perfile from '../../Img/profile.png';
 import logout from '../../Img/logout.png';
 import axios from 'axios'
-import Swal from 'sweetalert2'
 import { useDispatch } from "react-redux";
 import logoutActions from '../../Store/LogoutReload/actions';
+import toast, { Toaster } from 'react-hot-toast';
 
 const { logoutReload } = logoutActions
 
@@ -23,21 +23,24 @@ export default function NavBar() {
     async function handleLogout() {
         try {
             await axios.post(url, "", headers)
-            Swal.fire({
-                title: 'Logout Succefull',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                }
-            })
+            toast.success('Logout Succefull')
+         
             localStorage.removeItem('token')
             localStorage.removeItem('user')
+
             dispatch(logoutReload({ state: true }))
             window.location.reload();
         } catch (error) {
-            console.log(error)
+            if (error.response.data === 'Unauthorized') {
+                toast.error('You need to Login')
+            } else {
+                if (typeof error.response.data.message === 'string') {
+                    toast.error(error.response.data.message)
+                } else {
+                    error.response.data.message.forEach(err => toast.error(err))
+                }
+
+            }
 
         }
     }
@@ -64,7 +67,7 @@ export default function NavBar() {
                     </NavLink> : ""}
                 </>
 
-
+                <Toaster />
             </div>
         </>
     );

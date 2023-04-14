@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import categoriesActions from '../../Store/Categories/actions'
 import axios from 'axios'
-import Swal from 'sweetalert2'
+import toast, { Toaster } from 'react-hot-toast';
 
 const { read_all_categories } = categoriesActions
 
@@ -50,17 +50,28 @@ export default function EditProduct() {
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
         try {
             await axios.put(`https://matear-back.onrender.com/api/products/${id}`, article, headers)
-            Swal.fire({
-                title: ' Product Edit  Succefully',
-                showClass: {
-                    popup: 'animate__animated animate__fadeInDown'
-                },
-                hideClass: {
-                    popup: 'animate__animated animate__fadeOutUp'
-                }
-            })
+            
+            toast.success('Product Edit  Succefully')
+            // Swal.fire({
+            //     title: ' Product Edit  Succefully',
+            //     showClass: {
+            //         popup: 'animate__animated animate__fadeInDown'
+            //     },
+            //     hideClass: {
+            //         popup: 'animate__animated animate__fadeOutUp'
+            //     }
+            // })
         } catch (error) {
-            console.log(error)
+          if (error.response.data === 'Unauthorized') {
+                toast.error('You need to Login')
+            } else {
+                if (typeof error.response.data.message === 'string') {
+                    toast.error(error.response.data.message)
+                } else {
+                    error.response.data.message.forEach(err => toast.error(err))
+                }
+
+            }
         }
     }
 
@@ -89,6 +100,7 @@ export default function EditProduct() {
                         <button className='send-newproduct' onClick={handleSubmit}>Send</button>
                     </div>
                 </div>
+                <Toaster />
             </div>
         </>
     )
