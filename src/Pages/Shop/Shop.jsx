@@ -65,7 +65,7 @@ export default function Shop() {
                     <div className="filter-container">
                         {category.map(item => {
                             return (
-                                <div>
+                                <div className='check-cat'>
                                     <input type="checkbox" name="category" value={item._id} key={item._id} onClick={() => handleCategories(item._id)}/>
                                     <span className="category-label">{item.name}</span>
                                 </div>

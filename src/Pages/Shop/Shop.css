@@ -34,16 +34,20 @@
     flex-direction: column;
     background-color: #C5A880;
     border-radius: 10px;
-    min-width: 200px;
+    min-width: 250px;
     height: 300px;
     /* margin-right: 5px; */
+}
+.check-cat{
+    display: flex;
+    gap: 5px;
 }
 .filter-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    padding-right: 40px;
+    padding-right: 70px;
 }
 .input-search{
     border: 1px solid grey;
@@ -52,89 +56,28 @@
     padding: 5px;
 }
 
-/* .container-shop{
-    position: relative;
-    display: flex;
-    background-color: #E6E6E6;
-}
-
-.filtroPrecios{
-    display: flex;
-    width: 30vw;
-    height: 400px;
-    align-items: center;
-    justify-content: center; 
-}
-.cont-search-checks{
-    background-color: #C5A880;
-    border-radius: 10px;
-}
-.filter-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    height: 200px;
-    width: 150px;
-  }
-.two-filters{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    gap: 10px
-}
-.filtroTexto{
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: 2.2rem;
-    background-color: white;
-    border-radius: 30px;
-}
-
-.cont-cards{
-    display: flex;
-    flex-wrap: wrap;
-    width: 70vw;
-    justify-content: center;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    gap: 2rem;
-    position: relative;
-}
-
-.input-search{
-    font-family:Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2vh;
-    background: transparent;
-    border: none;
-} */
-/* .cont-only-search{
-    display: flex;
-    position: static;
-}
-
 .buscar{
     position: absolute;
     padding: 5px;
-    top:0;
-    left: 10px;
-    margin-top: 15px;
+    /* top:0; */
+    left: 30px;
+    margin-top: -15px;
 }
 .buscar input{
     width: 0px;
-    height: 40px;
-    padding: 0 20px;
+    height: 30px;
+    padding: 0 16px;
     font-size: 18px;
     color: black;
     outline: none;
     border: 1px solid silver;
     border-radius: 30px;
     transition: all 0.6s;
+}
+.buscar input::placeholder{
+    font-size: 14px;
+    /* color: rgb(88, 88, 88); */
+    /* font-weight: bold; */
 }
 .icon-search{
     display: flex;
@@ -148,8 +91,8 @@
     top: 0;
     right: 0;
     background-color: rgb(192, 127, 16);
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
     line-height: 55px;
     text-align: center;
     color: white;
@@ -159,8 +102,33 @@
 }
 
 .buscar:hover input{
-    width: 240px;
+    width: 215px;
 }
 .buscar input:focus{
-    width: 240px;
-} */
+    width: 215px;
+}
+
+
+@media (min-width: 320px) and (max-width: 750px){
+    .container-shop{
+        flex-direction: column;
+        align-items: center;
+    }
+    .filtroPrecios{
+        justify-content: center;
+    }
+    .filter-container{
+        flex-direction: row;
+        padding-right: 10px;
+        padding-left: 10px;
+        flex-wrap: wrap;
+    }
+    .cont-search-checks{
+        height: 90px;
+        margin-bottom: 20px;
+    }
+
+    .buscar{
+        left: 100px;
+    }
+}
