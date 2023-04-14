@@ -10,7 +10,7 @@
 .nav-container {
   background: #C5A880;
   border-radius: 10px;
-  height: 100vh;
+  /* height: 100vh; */
   position: absolute;
   right: 0;
   top: 0;
@@ -44,7 +44,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  width: 40vw;
+  width: 50vw;
   height: 3rem;
   text-decoration: none;
   font-weight: 500;

@@ -69,9 +69,9 @@ function Footer() {
               +03355626587
             </p>
             </div>
-          <a href="mailto:elcorreoquedesees@correo.com" className="cont-footer-contact">
+          <a href="mailto:company-email@correo.com" className="cont-footer-contact">
             <Image className="icon-correo" src={correo} />
-            elcorreoquedesees@correo.com
+            company-email@correo.com
           </a>
           <div className="cont-footer-contact">
             <Image className="icon-reloj" src={reloj} />

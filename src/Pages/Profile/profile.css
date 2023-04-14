@@ -109,9 +109,6 @@
       font-size: 14px;
     }
   
-    p {
-      font-size: 20px;
-    }
   }
   
   /* Estilos para pantallas de hasta 480px de ancho */
@@ -128,7 +125,7 @@
       font-size: 12px;
     }
   
-    p {
+    /* p {
       font-size: 18px;
-    }
+    } */
   }

@@ -19,8 +19,8 @@
 }
 
 iframe {
-  width: 400px;
-  height: 350px;
+  width: 350px;
+  height: 300px;
   border-radius: 20px;
   border: 1px solid #C5A880;
 }
@@ -50,6 +50,7 @@ a {
   color: black;
   padding: 1rem;
   font-size: 18px;
+  text-align: center;
   /* background-color: #e6e6e6;
   border-radius: 20px; */
 }
@@ -153,6 +154,10 @@ p {
   }
   .map{
     width: 310px;
+  }
+  .contact-us{
+    background-color: transparent;
+    width: 300px;
   }
 }
 
