@@ -9,7 +9,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .product .product-content {
@@ -93,4 +92,18 @@
         font-size: 25px;
         flex-wrap: wrap;
     }
+}
+
+
+.fade-in {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

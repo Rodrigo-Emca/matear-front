@@ -10,7 +10,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const { read_all_categories } = categoriesActions
 
 export default function CreateArticle() {
-
+    const [animate, setAnimate] = useState(false);
     const dispatch = useDispatch()
     let categories = useSelector(store => store.categories.categories)
    
@@ -22,6 +22,10 @@ export default function CreateArticle() {
         stock: "",
         price: "",
     })
+
+    useEffect(() => {
+        setAnimate(true);
+      }, []);
 
     useEffect(() => {
         dispatch(read_all_categories({}))
@@ -63,10 +67,10 @@ export default function CreateArticle() {
 
     return (
         <>
-            <div className='product'>
+            <div className={`product my-element ${animate ? "fade-in" : ""}`}>
                 <div className='product-content'>
                     <section className='new-product'>
-                        <h2 >New Product</h2> 
+                        <h2>New Product</h2> 
                     </section>
                     <div className='product-form' >
                         <input className='product-input' type='text' name='title' value={article.title} onChange={(e) => setArticle({ ...article, title: e.target.value })} placeholder='Insert Title' />

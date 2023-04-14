@@ -42,15 +42,15 @@ export default function Details() {
 
   function getCategoryName(value) {
     switch (value) {
-      case '642eeb2e9872d9f2ccaf55b3':
+      case '643870a794742add718cb2f4':
         return 'mates';
-      case '642eeb2e9872d9f2ccaf55b4':
+      case '643870a794742add718cb2f4':
         return 'thermos';
-      case '642eeb2e9872d9f2ccaf55b5':
+      case '643870a794742add718cb2f5':
         return 'strawbulbs';
-      case '642eeb2e9872d9f2ccaf55b6':
+      case '643870a794742add718cb2f6':
         return 'accessories';
-      case '642eeb2e9872d9f2ccaf55b7':
+      case '643870a794742add718cb2f7':
         return 'mate carriers';
       default:
         return '';
@@ -80,10 +80,10 @@ export default function Details() {
   <p>{productoSimple?.product_id?.description}</p>
   <p>Stock: <span style={{color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green'}}>{productoSimple?.product_id?.stock}</span></p>
   <p>Precio: ${productoSimple?.product_id?.price}</p>
-  <p>
-    <button className="btn-detail">Agregar al carrito</button>
+  <button className="btn-detail">Agregar al carrito</button>
+  
+  <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span>
   </p>
-  <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span></p>
   {token && user.admin ? <NavLink to={`/products/${productoSimple?.product_id?._id}`}  >
           <AiFillEdit className='fillEdit' />
         </NavLink> : ""}
