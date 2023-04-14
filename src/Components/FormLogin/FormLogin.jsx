@@ -97,7 +97,7 @@ return (
         </a>
         </div>
         </div>
-        <p className="color-white">
+        <p className="p-login-register">
         Don't have an account yet?{" "}
           <NavLink to={'/signup'} className="ancor-register">
             Register

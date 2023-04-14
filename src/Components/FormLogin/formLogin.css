@@ -54,6 +54,9 @@
 .ancor-register{
   color: green;
 }
+.p-login-register{
+  color: black;
+}
 @media (min-width:768px) and (max-width:1023px){
   .login-fondo{
     width: 350px;

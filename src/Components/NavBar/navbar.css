@@ -2,7 +2,8 @@
     display: flex;
     gap: 25px;
     margin-top: 10px;
-    
+    max-width: 480px;
+    padding-right: 10px;
 }
 
 .anchor-header .link-home {
@@ -31,7 +32,7 @@
     transform: rotate(-10deg);
 }
 
-.perfil-Icon:hover{
+.perfilIcon:hover{
     animation: shake-harder 2.0s;
     animation-iteration-count: infinite;
 }

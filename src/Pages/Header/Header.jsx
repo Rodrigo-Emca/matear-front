@@ -14,11 +14,11 @@ export default function Header() {
 
     return (
         <div className='header-container'>
-            <div className='anchor-header'>
-                <NavBar  />
-            </div>
             <div>
                 <img className='logo-header' src={ImgHome} alt={ImgHome} />
+            </div>
+            <div className='anchor-header'>
+                <NavBar  />
             </div>
             <div className='header-menuHamburguesa'>
                 <img onClick={handleRender} className="menu" src={iconoMenu} alt="menu-hamburguesa" />

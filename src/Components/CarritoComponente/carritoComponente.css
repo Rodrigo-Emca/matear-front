@@ -10,15 +10,30 @@
     background-color: #E6E6E6;
 }
 
+.mp {
+    border: none;
+    color: black;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+.img-mp {
+    width: 200px;
+    height: 60px;
+}
+
 .table{
     /* border: yellow 2px solid; */
     width: 90%;
 }
-
 .productImage{
     width: 50px;
 }
-
 .countContainer{
     /* border: green 2px solid; */
     width: 8rem;

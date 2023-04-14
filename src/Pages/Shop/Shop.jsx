@@ -6,6 +6,7 @@ import productsActions from '../../Store/ProductsAll/actions';
 import TextFilter from '../../Components/TextFilter/TextFilter';
 import categoriesActions from '../../Store/Categories/actions'
 
+
 const { read_all_products, filter_product } = productsActions;
 const { read_all_categories } = categoriesActions
 
@@ -57,21 +58,23 @@ export default function Shop() {
     }, [filter])
 
     return (
-        <div className='container'>
+        <div className='container-shop'>
             <div className='filtroPrecios'>
-                <p>Aqui va el filtro por precios</p>
+                <div className='cont-search-checks'>
+                    <TextFilter defaultText={filter.condition} onChange={handleChange} />
+                    <div className="filter-container">
+                        {category.map(item => {
+                            return (
+                                <div className='check-cat'>
+                                    <input type="checkbox" name="category" value={item._id} key={item._id} onClick={() => handleCategories(item._id)}/>
+                                    <span className="category-label">{item.name}</span>
+                                </div>
+                                )
+                            })}
+                    </div>
+                </div>
             </div>
             <div className='contenedorFiltroYCards'>
-                <TextFilter defaultText={filter.condition} onChange={handleChange} />
-
-                {category.map(item => {
-                    return (
-                        <>
-                            <input type="checkbox" name="category" value={item._id} key={item._id} onClick={() => handleCategories(item._id)} />
-                            <span  className="category-label">{item.name}</span>
-                        </>
-                    )
-                })}
                 <div className='cont-cards'>
                     {productos.length > 0 ? (
                         productos.map((productoIndividual) => (
@@ -79,7 +82,7 @@ export default function Shop() {
                                 reload={reload}
                                 setReload={setReload}
                                 key={productoIndividual._id}
-                                idProduct={productoIndividual._id}
+                                _id={productoIndividual._id}
                                 product_id={productoIndividual.product_id}
                                 photos={productoIndividual.photo}
                             />

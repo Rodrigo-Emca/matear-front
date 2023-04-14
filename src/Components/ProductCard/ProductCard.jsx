@@ -4,8 +4,6 @@ import './productCard.css';
 import CartButton from '../CartButton/CartButton';
 
 export default function ProductCard(props) {
-    // console.log(props.product_id.cover_photo)
-    // console.log(props.photos[0])
     const description =
         props.product_id.description.length > 135
         ? `${props.product_id.description.slice(0, 135)} (...)`
@@ -20,6 +18,8 @@ export default function ProductCard(props) {
         stockText = `${props.product_id.stock} units`;
     }
 
+    const token = localStorage.getItem('token');
+
     return (
         <div className="container">
             <div className="card">
@@ -32,10 +32,10 @@ export default function ProductCard(props) {
                         <p>$ {parseFloat(props.product_id.price).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 3 })} ARS</p>
                         <p>Available: {stockText}</p>
                         <div className="contenedorDetails">
-                        <Anchor to={`/details/${props.idProduct}`} className="detail-shop" >
-                            Details
-                        </Anchor>
-                        {props.product_id.stock !== 0 && <CartButton product={props} />}
+                            <Anchor to={`/details/${props._id}`} className="detail-shop">
+                                Details
+                            </Anchor>
+                            {token && props.product_id.stock !== 0 && <CartButton product={props} />}
                         </div>
                     </div>
                 </div>

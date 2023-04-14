@@ -49,7 +49,7 @@ export default function NavBar() {
             <div className='anchor-header'>
                 <NavLink to={'/home'} className='link-home'> Home </NavLink>
                 <NavLink to={'/shop'} className='link-home'> Shop </NavLink>
-                <NavLink className='link-home'>Contact</NavLink>
+                {/* <NavLink className='link-home'>Contact</NavLink> */}
                 {token ? "" : <NavLink to={'/signin'} className='link-home'>Login </NavLink>}
                 <>
                     {token && user.admin ? <NavLink to={'/newarticle'} className='link-home'> New Product </NavLink> : ""}
