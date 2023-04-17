@@ -70,7 +70,7 @@
     margin-top: -20rem;
 }
 .seccion-final::after {
-    content: "POKEMON";
+    /* content: "POKEMON"; */
     position: absolute;
     bottom: 0;
     left: 50%;
