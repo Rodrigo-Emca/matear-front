@@ -96,6 +96,31 @@
     width: 310px;
     text-align: center;
 }
+.prepare-mate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.center-h2{
+    text-align: center;
+}
+.pasesImg{
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 black;
+}
+.prepare-mate-pass{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 40px; */
+}
+.p-width{
+    width: 300px;
+}
 @media (max-width:750px){
     .logo-home{
         display: none;

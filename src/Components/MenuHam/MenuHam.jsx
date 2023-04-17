@@ -74,8 +74,8 @@ export default function MenuHam({ handleRender }) {
                     {token && user.admin ? <NavLink to={'/newarticle'} className='a-menu'> New Product </NavLink> : ""}
                     {token ? <NavLink to={'/profile'} className='a-menu'>Profile </NavLink> : ""}
                     {token ? <NavLink className='a-menu' onClick={handleLogout}>Logout</NavLink> : ""}
-                    {/* <NavLink className='a-menu'>Contact</NavLink> */}
-                    {token ? "" : <NavLink to={'/signin'} className='a-menu'> Login </NavLink>}
+                    {/* <NavLink className='a-menu'>Contact</NavLink>*/}
+                    {token ? "" : <NavLink to={'/signin'} className='a-menu'> Login </NavLink>} 
 
                 </div>
             </div>

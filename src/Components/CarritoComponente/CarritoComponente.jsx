@@ -143,7 +143,7 @@ export default function CarritoComponente() {
               <td>
                 <StockInfo stock={item.product.product_id.stock} />
               </td>
-              <td>
+              <td className="contadorStock">
                 <ContadorStock
                   index={index}
                   count={counts[index]}

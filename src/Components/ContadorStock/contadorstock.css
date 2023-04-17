@@ -1,35 +1,31 @@
+.countContainer{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.countContainer .count-product{
+    display: flex;
+    gap:10px;
+}
 .countButtonMore{
-    width: 30px;
-    border-radius: 15px;
-    /* background-color: transparent; */
-    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    color: black;
     cursor: pointer;
-    box-shadow: 0 0 2px 0 black;
 }
-/* .countButtonMore:hover{
-    transform: scale(1.2);
-}
-.countButtonMore:active{
-    transform: scale(0.9);
-    transition: all 0.1s ease-in-out;
-    background-color: rgb(75, 241, 75);
-} */
-
 
 .countButtonMinus{
-    /* width: 30px; */
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 15px;
-    border: 1px solid black;
+    width: 21px;
+    height: 21px;
     cursor: pointer;
-    box-shadow: 0 0 2px 0 black;
+    color: black;
 }
-/* .countButtonMinus:hover{
-    transform: scale(1.1);
+.countButtonReset{
+    width: 20px;
+    height: 20px;
+    color: black;
 }
-.countButtonMinus:active{
-    transform: scale(0.9);
-    transition: all 0.1s ease-in-out;
-    background-color: red;
-} */
+.countButtonReset:hover{
+    color: red;
+    cursor: pointer;
+}
