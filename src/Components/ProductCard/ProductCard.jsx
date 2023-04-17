@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link as Anchor } from 'react-router-dom';
 import './productCard.css';
 import CartButton from '../CartButton/CartButton';
 
 export default function ProductCard(props) {
+    const [isVisible, setIsVisible] = useState(false);
+    const [areProductsVisible, setAreProductsVisible] = useState(false); // Define la variable
     const token = localStorage.getItem('token');
     const description =
         props.product_id.description.length > 135
@@ -12,15 +14,27 @@ export default function ProductCard(props) {
 
     let stockText = '';
     if (props.product_id.stock === 0) {
-        stockText = 'Momentaneamente sin Stock';
+        stockText = 'Momentarily out of stock';
     } else if (props.product_id.stock < 5) {
-        stockText = 'Ultimas ' + `${props.product_id.stock}` + ' unidades disponibles';
+        stockText = 'Last ' + `${props.product_id.stock}` + ' units available';
     } else {
         stockText = `${props.product_id.stock} units`;
     }
 
+
+    useEffect(() => {
+        setIsVisible(false);
+        if (areProductsVisible) {
+          setTimeout(() => setIsVisible(true), 100);
+        }
+      }, [areProductsVisible, props.reload]);
+
+    useEffect(() => {
+        setAreProductsVisible(true); // Define la variable como verdadera al cargar el componente
+    }, []);
+
     return (
-        <div className="container">
+        <div className={`container product-card ${isVisible ? 'visible' : ''}`}>
             <div className="card">
                 <div className="image">
                 <img src={props.product_id.cover_photo} alt="imagen" />

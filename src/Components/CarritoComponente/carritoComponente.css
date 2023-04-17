@@ -9,7 +9,11 @@
     /* border: red 2px solid; */
     background-color: #E6E6E6;
 }
-
+table{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
 .mp {
     border: none;
     color: black;
@@ -26,13 +30,26 @@
     width: 200px;
     height: 60px;
 }
-
 .table{
     /* border: yellow 2px solid; */
     width: 90%;
+    text-align: center;
+    border-collapse: separate;
+    table-layout: fixed;
+    border-spacing: 10px;
 }
+/* tr, td{ para responsive
+    table-layout: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
 .productImage{
-    width: 50px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.526);
+    box-shadow: 0 0 4px 0 black;
 }
 .countContainer{
     /* border: green 2px solid; */

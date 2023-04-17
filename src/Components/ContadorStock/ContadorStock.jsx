@@ -1,4 +1,5 @@
 import React from 'react';
+import './contadorstock.css'
 
 export default function ContadorStock(props) {
     const { index, count, incrementCount, decrementCount, outOfStock, removeItem } = props;
@@ -14,7 +15,7 @@ export default function ContadorStock(props) {
     return (
         <div className='countContainer'>
             <button
-                className='countButton'
+                className='countButtonMinus'
                 onClick={handleDecrement}
                 disabled={outOfStock}
             >
@@ -22,7 +23,7 @@ export default function ContadorStock(props) {
             </button>
             <span className='countNumber'>{count}</span>
             <button
-                className='countButton'
+                className='countButtonMore'
                 onClick={() => incrementCount(index)}
                 disabled={outOfStock}
             >

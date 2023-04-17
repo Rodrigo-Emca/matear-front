@@ -120,7 +120,7 @@ export default function CarritoComponente() {
             <th>Sub-total</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="hola2">
           {items.map((item, index) => (
             <tr key={item.product.idProduct}>
               <td>
@@ -138,7 +138,7 @@ export default function CarritoComponente() {
                 {parseFloat(item.product.product_id.price).toLocaleString(
                   "es-AR"
                 )}{" "}
-                ARS
+                ,00 ARS
               </td>
               <td>
                 <StockInfo stock={item.product.product_id.stock} />
@@ -161,7 +161,7 @@ export default function CarritoComponente() {
                   parseFloat(item.product.product_id.price) *
                   parseFloat(counts[index])
                 ).toLocaleString("es-AR")}{" "}
-                ARS
+                ,00 ARS
               </td>
             </tr>
           ))}
@@ -174,7 +174,7 @@ export default function CarritoComponente() {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 3,
               })}{" "}
-              ARS
+              ,00 ARS
             </td>
           </tr>
           <button className="mp" onClick={handleCheckout}>
