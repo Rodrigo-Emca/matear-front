@@ -101,8 +101,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 4rem;
     padding-bottom: 20px;
+    padding-top: 2rem;
 }
 .center-h2{
     text-align: center;

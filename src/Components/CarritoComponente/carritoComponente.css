@@ -59,13 +59,6 @@ table {
     border-spacing: 10px;
 }
 
-/* tr, td{ para responsive
-    table-layout: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-} */
 .productImage {
     width: 100px;
     border-radius: 5px;
