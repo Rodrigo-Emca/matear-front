@@ -31,7 +31,7 @@ export default function ProductCard(props) {
                         <p>$ {parseFloat(props.product_id.price).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 3 })} ARS</p>
                         <p>Available: {stockText}</p>
                         <div className="contenedorDetails">
-                        <Anchor to={`/details/${props.idProduct}`} className="detail-shop" >
+                        <Anchor to={`/details/${props._id}`} className="detail-shop" >
                             Details
                         </Anchor>
                         {token && props.product_id.stock !== 0 && <CartButton product={props} />}

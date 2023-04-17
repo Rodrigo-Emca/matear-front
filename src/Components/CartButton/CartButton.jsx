@@ -3,24 +3,23 @@ import './cartButton.css';
 import { BiCart } from "react-icons/bi"
 
 export default function CartButton(props) {
-
     const [pressed, setPressed] = useState(false);
 
     useEffect(() => {
-        const cartItemKey = `cartItem${props.product.idProduct}`;
+        const cartItemKey = `cartItem${props.product._id}`;
         const cartItemExists = localStorage.getItem(cartItemKey) !== null;
         setPressed(cartItemExists);
-    }, [props.product.idProduct]);
+    }, [props.product._id]);
 
     const handleClick = () => {
-        const cartItemKey = `cartItem${props.product.idProduct}`;
+        const cartItemKey = `cartItem${props.product._id}`;
         const cartItemExists = localStorage.getItem(cartItemKey) !== null;
     
         if (cartItemExists) {
             localStorage.removeItem(cartItemKey);
             setPressed(false);
         } else {
-            localStorage.setItem(cartItemKey, JSON.stringify(props));
+            localStorage.setItem(cartItemKey, JSON.stringify(props.product._id));
             setPressed(true);
         }
     };
