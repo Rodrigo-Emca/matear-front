@@ -1,0 +1,35 @@
+.countButtonMore{
+    width: 30px;
+    border-radius: 15px;
+    /* background-color: transparent; */
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 black;
+}
+/* .countButtonMore:hover{
+    transform: scale(1.2);
+}
+.countButtonMore:active{
+    transform: scale(0.9);
+    transition: all 0.1s ease-in-out;
+    background-color: rgb(75, 241, 75);
+} */
+
+
+.countButtonMinus{
+    /* width: 30px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 0 0 2px 0 black;
+}
+/* .countButtonMinus:hover{
+    transform: scale(1.1);
+}
+.countButtonMinus:active{
+    transform: scale(0.9);
+    transition: all 0.1s ease-in-out;
+    background-color: red;
+} */

@@ -1,119 +1,128 @@
 /* *{
     border: 1px solid red
 } */
-.container-shop{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: #E6E6E6;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.container-shop {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.filtroPrecios{
-    display: flex;
-    width: 20;
-    padding-left: 20px;
+.filtroPrecios {
+  display: flex;
+  width: 20;
+  padding-left: 20px;
 }
-.contenedorFiltroYCards{
-    display: flex;
-    width: 80vw;;
+.contenedorFiltroYCards {
+  display: flex;
+  width: 80vw;
 }
-.cont-cards{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
+.cont-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
-.cont-search-checks{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    min-width: 250px;
-    height: 300px;
-    /* margin-right: 5px; */
+.cont-search-checks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 250px;
+  height: 300px;
+  /* margin-right: 5px; */
 }
-.check-cat{
-    display: flex;
-    gap: 5px;
+.check-cat {
+  display: flex;
+  gap: 5px;
 }
-.filter-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    padding-right: 70px;
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 70px;
 }
-.input-search{
-    border: 1px solid grey;
-    border-radius: 20px;
-    width: 90%;
-    padding: 5px;
-}
-
-.buscar{
-    position: absolute;
-    padding: 5px;
-    /* top:0; */
-    left: 30px;
-    margin-top: -15px;
-}
-.buscar input{
-    width: 0px;
-    height: 30px;
-    padding: 0 16px;
-    font-size: 18px;
-    color: black;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6s;
-}
-.buscar input::placeholder{
-    font-size: 14px;
-    /* color: rgb(88, 88, 88); */
-    /* font-weight: bold; */
-}
-.icon-search{
-    display: flex;
-    width: 25px;
-}
-.btn-search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgb(255, 255, 255);
-    width: 40px;
-    height: 40px;
-    line-height: 55px;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 1px solid silver;
+.input-search {
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 90%;
+  padding: 5px;
 }
 
-.buscar:hover input{
-    width: 215px;
+.buscar {
+  position: absolute;
+  padding: 5px;
+  /* top:0; */
+  left: 30px;
+  margin-top: -15px;
 }
-.buscar input:focus{
-    width: 215px;
+.buscar input {
+  width: 0px;
+  height: 30px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s;
 }
-.not-found-color{
-    color: black;
+.buscar input::placeholder {
+  font-size: 14px;
+  /* color: rgb(88, 88, 88); */
+  /* font-weight: bold; */
+}
+.icon-search {
+  display: flex;
+  width: 25px;
+}
+.btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid silver;
 }
 
-@media (min-width: 320px) and (max-width: 599px){
-    /* .container-shop{
+.buscar:hover input {
+  width: 215px;
+}
+.buscar input:focus {
+  width: 215px;
+}
+.not-found-color {
+  color: black;
+}
+
+.product-card {
+  opacity: 0.5; /* Ajusta el valor de opacidad a tu gusto */
+  transition: opacity 0.5s ease; /* Añade una transición para que el cambio de opacidad sea suave */
+}
+
+.product-card.visible {
+  opacity: 1; /* Cuando la tarjeta es visible, establece la opacidad a 1 */
+}
+
+@media (min-width: 320px) and (max-width: 599px) {
+  /* .container-shop{
         flex-direction: column;
         align-items: center;
     }
@@ -125,7 +134,7 @@
     .buscar{
         left: 35%;
     } */
-    .container-shop{
-        flex-wrap: wrap;
-    }
+  .container-shop {
+    flex-wrap: wrap;
+  }
 }
