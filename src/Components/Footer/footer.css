@@ -2,35 +2,6 @@
   display: flex;
   flex-direction: column;
 }
-.section-map-desc {
-  display: flex;
-  background-color: #E6E6E6;
-  padding: 10px;
-  align-items: center;
-  justify-content: space-around;
-  gap: 10px;
-}
-.map{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 420px;
-  height: 370px;
-}
-
-iframe {
-  width: 350px;
-  height: 300px;
-  border-radius: 20px;
-  border: 1px solid #C5A880;
-}
-
-.description {
-  display: flex;
-  justify-content: center;
-
-}
-
 .section-contact {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +10,6 @@ iframe {
   justify-content: space-around;
   padding: 1rem;
 }
-
 a {
   color: white;
   text-decoration: none;
@@ -109,7 +79,7 @@ p {
   width: 230px;
   padding: 10px;
 }
-.icon-ubicacion{
+.icon-ubicacion {
   width: 12px;
 }
 .instagram {
@@ -119,19 +89,19 @@ p {
   /* height: 20px; */
   object-fit: cover;
 }
-.icon-reloj{
+.icon-reloj {
   width: 20px;
   object-fit: cover;
 }
-.icon-correo{
+.icon-correo {
   width: 20px;
   object-fit: cover;
 }
-.icon-instagram{
+.icon-instagram {
   width: 20px;
   object-fit: cover;
 }
-.cont-footer-contact{
+.cont-footer-contact {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -142,30 +112,9 @@ p {
   }
 }
 
-/* @media (min-width: 320px) and (max-width: 450px) {
-  .img-logo {
-    width: 200px;
-  }
-} */
 @media (min-width: 320px) and (max-width: 500px) {
-  iframe{
-    width: 300px;
-    height: 300px;
-  }
-  .map{
-    width: 310px;
-  }
-  .contact-us{
+  .contact-us {
     background-color: transparent;
     width: 300px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 750px) {
-  .section-map-desc{
-    flex-direction: column;
-  }
-  #wellcome{
-    font-size: 1rem;
   }
 }

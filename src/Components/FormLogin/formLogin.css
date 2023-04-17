@@ -35,7 +35,7 @@
   color: white;
   width: 250px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: 2px;
   font-weight: 700;
   font-size: 14px;
   border: none;
@@ -48,7 +48,6 @@
   justify-content: center;
   text-decoration: none;
   width: 250px;
-  height: 40px;
   border: 1px solid #1f1f1f84;
   background: #ffffff;
   border-radius: 8px;
@@ -60,6 +59,8 @@
 }
 .ancor-register{
   color: green;
+  border-bottom: 1px solid green;
+  font-weight: bold;
 }
 .p-login-register{
   color: black;
