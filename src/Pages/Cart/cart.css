@@ -1,4 +1,4 @@
 .containerCarrito{
-    height: 85vh;
+    min-height: 85vh;
     /* border: red solid 2px; */
 }
