@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.css";
 import Image from "../Image/Image";
 import { Link as Anchor } from "react-router-dom";
-import logoMate from "../../Img/logo-matear-no-borders-white.png";
+import logoMate from "../../Img/LOGO-MATEAR-BLANCO.png";
 import mercadopago from "../../Img/mercadopago.png";
 // import paypal from "../../Img/paypal.png";
 import instagram from "../../Img/instagram.png";

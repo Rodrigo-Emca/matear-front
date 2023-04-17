@@ -179,7 +179,7 @@ export default function CarritoComponente() {
         </tbody>
         <tbody>
           <tr className="tr-button">
-            <td >
+            <td className="td-button">
               <button className="finish-buy" onClick={handleCheckout}> Buy Now </button>
               <button className="clean-cart" onClick={removeAllItem}>Empty Cart</button>
             </td>
