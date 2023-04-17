@@ -23,20 +23,18 @@ function Footer() {
         </div>
         <div className="description">
           <p id="wellcome">
-            Welcome to our website, where we are proud to offer the highest
-            quality thermos and mate products on the market. Our business was
-            born out of a love for the rich culture and tradition of sharing
-            mate with friends and family. We understand that mate is not just a
-            drink, but a way of life for many people around the world, and we
-            are committed to providing the tools and accessories necessary to
-            enjoy this experience to the fullest.
+            Our business is located in the heart of the city, just a few blocks
+            away from the main square. You can find us at 123 Main Street, near
+            the corner of Broadway and Main. We're easily accessible by public
+            transportation and there is ample parking nearby. We look forward to
+            seeing you soon!
           </p>
         </div>
       </div>
       <div className="section-contact">
-          <div className="termo">
-            <Image src={logoMate} alt="Termo" className="img-logo" />
-          </div>
+        <div className="termo">
+          <Image src={logoMate} alt="Termo" className="img-logo" />
+        </div>
         <div className="anchors-pages">
           <Anchor className="anchor" to="./store">
             Shop
@@ -59,27 +57,24 @@ function Footer() {
         <div className="contact-us">
           <div className="cont-footer-contact">
             <Image className="icon-ubicacion" src={pindemapa} />
-            <p>
-              BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA
-            </p>
+            <p>BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA</p>
           </div>
           <div className="cont-footer-contact">
             <Image className="instagram" src={telefono} />
-            <p>
-              +03355626587
-            </p>
-            </div>
-          <a href="mailto:company-email@correo.com" className="cont-footer-contact">
+            <p>+03355626587</p>
+          </div>
+          <a
+            href="mailto:company-email@correo.com"
+            className="cont-footer-contact"
+          >
             <Image className="icon-correo" src={correo} />
             company-email@correo.com
           </a>
           <div className="cont-footer-contact">
             <Image className="icon-reloj" src={reloj} />
-            <p>
-              10-21hs LUNES A VIERNES / 10-20hs SABADOS
-            </p>
+            <p>10-21hs LUNES A VIERNES / 10-20hs SABADOS</p>
           </div>
-          <Anchor to="" className="cont-footer-contact" >
+          <Anchor to="" className="cont-footer-contact">
             <Image className="icon-instagram" src={instagram} /> @mateAr{" "}
           </Anchor>
         </div>
