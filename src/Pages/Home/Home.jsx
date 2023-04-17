@@ -4,6 +4,7 @@ import ImgFondo from '../../Img/imagen-fondo.jpg'
 import ImgFondo2 from '../../Img/img-fondo.jpeg'
 import ImgFondo4 from '../../Img/cat-accesorios.jpg'
 import ImgFondo5 from '../../Img/mate-paisaje.jpg'
+import middleImage from '../../Img/Mid-5000.png'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -37,9 +38,11 @@ export default function Home() {
                         }}
                         className='logo-home'> WELCOME TO MATE.AR</motion.p>
                 </div>
-                
-
+                      
             </div>
+
+            <img className='middle-image' src={middleImage} alt="" />
+
         </div>
 
     )
