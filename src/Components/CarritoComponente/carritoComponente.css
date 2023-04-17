@@ -1,4 +1,4 @@
-.mainContainer{
+.mainContainer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -6,31 +6,51 @@
     justify-content: space-evenly;
     padding-top: 2vh;
     position: relative;
-    /* border: red 2px solid; */
     background-color: #E6E6E6;
 }
-table{
+
+table {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
 }
-.mp {
+
+.finish-buy {
+    width: 90%;
+    height: 30%;
     border: none;
-    color: black;
-    padding: 12px 24px;
+    background-color: #2287df;
+    color: rgb(255, 255, 255);
     text-align: center;
-    text-decoration: none;
+    padding: 8px;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin-bottom: 4px;
     cursor: pointer;
     border-radius: 4px;
-  }
-.img-mp {
-    width: 200px;
-    height: 60px;
 }
-.table{
+.finish-buy:hover{
+    background-color: #2286dd7e;
+}
+.clean-cart{
+    width: 90%;
+    height: 30%;
+    border: none;
+    background-color: #9e272741;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 8px;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.clean-cart:hover{
+    background-color: #fd2e2e63;
+}
+
+
+.table {
     /* border: yellow 2px solid; */
     width: 90%;
     text-align: center;
@@ -38,6 +58,7 @@ table{
     table-layout: fixed;
     border-spacing: 10px;
 }
+
 /* tr, td{ para responsive
     table-layout: auto;
     display: flex;
@@ -45,23 +66,55 @@ table{
     justify-content: center;
     flex-direction: column;
 } */
-.productImage{
+.productImage {
     width: 100px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.526);
     box-shadow: 0 0 4px 0 black;
 }
-.countContainer{
+
+.countContainer {
     /* border: green 2px solid; */
     width: 8rem;
     height: 2rem;
     display: flex;
     justify-content: space-evenly;
 }
-.contadorStock{
+
+.contadorStock {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 38px;
     margin-left: 20px;
+}
+
+@media (min-width:320px) and (max-width:760px){
+    thead{
+        display: none;
+    }
+   .mainContainer .hola2 .tr-product{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.8rem;
+    }
+    .total-purchase{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2.5rem;
+    }
+     .finish-buy{
+        width: 30%;
+    }
+    .clean-cart{
+        width: 30%;
+        height: 30%;
+    }
+    .tr-button td{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
 }
