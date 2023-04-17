@@ -143,7 +143,7 @@ export default function CarritoComponente() {
               <td>
                 <StockInfo stock={item.product.product_id.stock} />
               </td>
-              <td>
+              <td className="contadorStock">
                 <ContadorStock
                   index={index}
                   count={counts[index]}
@@ -153,8 +153,6 @@ export default function CarritoComponente() {
                   removeItem={() => removeItem(item.product.idProduct)}
                 />
               </td>
-              {/* <td>$ {(parseFloat(item.product.product_id.price) * parseFloat(counts[index])).toFixed(3)} ARS</td> */}
-              {/* <td>$ {(parseFloat(item.product.product_id.price) * parseFloat(counts[index])).toLocaleString('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 3 })} ARS</td> */}
               <td>
                 ${" "}
                 {(
