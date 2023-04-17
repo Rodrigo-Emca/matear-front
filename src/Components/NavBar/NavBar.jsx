@@ -8,6 +8,8 @@ import axios from 'axios'
 import { useDispatch } from "react-redux";
 import logoutActions from '../../Store/LogoutReload/actions';
 import toast, { Toaster } from 'react-hot-toast';
+import { GiShoppingCart } from "react-icons/gi"
+import { FaUserAlt } from 'react-icons/fa'
 
 const { logoutReload } = logoutActions
 
@@ -23,14 +25,14 @@ export default function NavBar() {
     async function handleLogout() {
         try {
             await axios.post(url, "", headers)
-            
+
             localStorage.removeItem('token')
             localStorage.removeItem('user')
-            
+
             dispatch(logoutReload({ state: true }))
             window.location.reload();
             toast.success('Logout Succefull')
-            
+
         } catch (error) {
             if (error.response.data === 'Unauthorized') {
                 toast.error('You need to Login')
@@ -58,10 +60,12 @@ export default function NavBar() {
                 <>
                     {token && user.admin ? <NavLink to={'/newarticle'} className='link-home'> New Product </NavLink> : ""}
                     {token ? <NavLink to={'/shoppingcart'}>
-                        <img src={shoppingCartIcon} alt='Shopping cart icon' className='carritoCompras' />
+                        {/* <img src={shoppingCartIcon} alt='Shopping cart icon' className='carritoCompras' /> */}
+                        <GiShoppingCart className='carritoCompras' />
                     </NavLink> : ""}
                     {token ? <NavLink to={'/profile'}>
-                        <img src={perfile} style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='perfilIcon' />
+                        {/* <img src={perfile} style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='perfilIcon' /> */}
+                        <FaUserAlt className='perfilIcon'/>
                     </NavLink> : ""}
                     {token ? <NavLink to={'/home'}>
                         <img src={logout} style={{ width: '30px', height: '30px' }} alt='Perfil icon' className='perfilIcon' onClick={handleLogout} />

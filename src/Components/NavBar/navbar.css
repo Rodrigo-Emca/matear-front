@@ -23,15 +23,22 @@
     padding: 5px; */
     border-bottom: 2px solid white ;
 }
-
-.carritoCompras{
+.cart-home{
     width: 30px;
+    height: 30px;
+}
+.carritoCompras{
+    width: 35px;
+    height: 30px;
 }
 
 .carritoCompras:hover {
     transform: rotate(-10deg);
 }
-
+.perfilIcon{
+    width: 23px;
+    height: 25px;
+}
 .perfilIcon:hover{
     animation: shake-harder 2.0s;
     animation-iteration-count: infinite;
