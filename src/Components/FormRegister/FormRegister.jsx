@@ -1,11 +1,15 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./formRegister.css";
 // import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
 import axios from "axios";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 import google from '../../Img/Google.svg'
 import { NavLink } from "react-router-dom";
+import { gapi } from "gapi-script";
+import { GoogleLogin } from "react-google-login";
+import { useNavigate } from 'react-router';
 
 export default function Form() {
   const nameRef = useRef();
@@ -14,6 +18,7 @@ export default function Form() {
   const countryRef = useRef();
   const addressRef = useRef();
   const mailing_addressRef = useRef();
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -42,26 +47,71 @@ export default function Form() {
     try {
       await axios.post(url, data);
 
-      Swal.fire({
-        title: "User successfully created",
-        showClass: {
-          popup: "animate__animated animate__fadeInDown",
-        },
-        hideClass: {
-          popup: "animate__animated animate__fadeOutUp",
-        },
-      });
+      toast.success('User successfully created')
       event.target.reset();
     } catch (error) {
       console.log(error);
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Something went wrong Check that inputs are corrects! ",
-      });
+      toast.error("Something went wrong")
       console.log("ocurrio un error");
     }
+
+    
   };
+  const clientID =
+    "565189616801-1du0ps5k1l6v18edj9m370d6ra9kt3v4.apps.googleusercontent.com";
+
+    useEffect(() => {
+      const start = () => {
+        gapi.auth2.init({
+          clientId: clientID,
+        });
+      };
+      gapi.load("client:auth2", start);
+    }, []); 
+    const onSuccess = async (response) => {
+      console.log(response);
+      try {
+        const { name ,email,  googleId } = response.profileObj;
+  
+        const data = {
+          name: name,
+          mail: email,
+        
+          password: googleId,
+        };
+        console.log(data.name);
+        const url = "https://matear-back.onrender.com/api/auth/signup";
+        await axios.post(url, data);
+        toast.success('User successfully created')
+        
+        
+        navigate("/");
+      } catch (error) {
+        console.error(error);
+        let errorMessage = "";
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.message
+        ) {
+          if (typeof error.response.data.message === "string") {
+            errorMessage = error.response.data.message;
+          } else {
+            errorMessage = error.response.data.message.join(" ");
+          }
+        } else {
+          errorMessage = "Se produjo un error al procesar la solicitud.";
+        }
+        console.log(errorMessage);
+        toast.error('Something went wrong')
+        
+      }
+    };
+    const onFailure = () => {
+      console.log("Something went wrong");
+    };
+
+
 
   return (
     <div className="register-dad">
@@ -114,16 +164,20 @@ export default function Form() {
           </fieldset> */}
           <div className="buttons-container">
             <div>
-              <button type="submit" className="sign-up">
+              <button type="submit" className="sign-up"
+              >
                 Sign up
               </button>
             </div>
-            <div>
-              <a href="#" className="sign-in-google">
-                <Image src={google} />
-                <span className="color-black">Sign in with Google</span>
-              </a>
-            </div>
+            <GoogleLogin
+          
+          
+          text="Sign in with Google"
+          clientId={clientID}
+          onSuccess={onSuccess}
+          onFailure={onFailure}
+          cookiePolicy={"sigle_host_policy"}
+        />
           </div>
           <p>
             Already have an account?{" "}

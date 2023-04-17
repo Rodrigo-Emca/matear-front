@@ -12,6 +12,7 @@
   padding-top: 20px;
   padding-bottom: 40px;
   gap: 5px;
+  box-shadow: 0 0 8px 0 black;
 }
 .register-name, .register-email, .register-password, .register-country, .register-address, .register-mailing-address{
   width: 250px;
@@ -41,6 +42,10 @@
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
+
+
+
 
 @media (min-width:320px) and (max-width:450px){
   .form-register{
