@@ -1,6 +1,6 @@
 .profile-fond {
-    background-color: #000000;
-    background-image: url(../../Img/yerba-mate-fondo1.png);
+    background-color: #E6E6E6;
+    /* background-image: url(../../Img/yerba-mate-fondo1.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +19,7 @@
     gap: 1rem;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #e6e6e6c7;
+    background-color: #ffffffc7;
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;

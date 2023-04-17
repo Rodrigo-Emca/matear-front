@@ -1,34 +1,34 @@
 import React from 'react';
-import './contadorstock.css'
+import './contadorstock.css';
 
 export default function ContadorStock(props) {
     const { index, count, incrementCount, decrementCount, outOfStock, removeItem } = props;
 
-    const handleDecrement = () => {
-        if (count === 1) {
-            removeItem();
-        } else {
-            decrementCount(index);
-        }
-    }
-
     return (
         <div className='countContainer'>
+        <div>   
             <button
-                className='countButtonMinus'
-                onClick={handleDecrement}
-                disabled={outOfStock}
-            >
-                {count === 1 ? "Remove" : "-"}
+                className='countButtonMore'
+                onClick={() => decrementCount(index)}
+                disabled={count === 1 || outOfStock}
+                >
+                -
             </button>
             <span className='countNumber'>{count}</span>
             <button
-                className='countButtonMore'
-                onClick={() => incrementCount(index)}
-                disabled={outOfStock}
+            className='countButtonMore'
+            onClick={() => incrementCount(index)}
+            disabled={outOfStock}
             >
-                +
+            +
             </button>
+        </div>
+        <button
+            className='countButtonReset'
+            onClick={() => removeItem()}
+        >
+            Remove Item
+        </button>
         </div>
     );
 }

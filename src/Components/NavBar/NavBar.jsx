@@ -25,14 +25,13 @@ export default function NavBar() {
     async function handleLogout() {
         try {
             await axios.post(url, "", headers)
-
+            toast.success('Logout Succefull')
+         
             localStorage.removeItem('token')
             localStorage.removeItem('user')
 
             dispatch(logoutReload({ state: true }))
             window.location.reload();
-            toast.success('Logout Succefull')
-
         } catch (error) {
             if (error.response.data === 'Unauthorized') {
                 toast.error('You need to Login')
