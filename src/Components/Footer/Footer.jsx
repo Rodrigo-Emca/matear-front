@@ -57,7 +57,7 @@ function Footer() {
         <div className="contact-us">
           <div className="cont-footer-contact">
             <Image className="icon-ubicacion" src={pindemapa} />
-            <p>BUENOS AIRES ESQ LARRAÑACA, NUEVA CBA</p>
+            <p>BUENOS AIRES ESQ LARRAÑACA</p>
           </div>
           <div className="cont-footer-contact">
             <Image className="instagram" src={telefono} />
