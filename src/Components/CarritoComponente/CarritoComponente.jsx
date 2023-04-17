@@ -23,6 +23,11 @@ export default function CarritoComponente() {
       prevItems.filter((item) => item.product.idProduct !== idProduct)
     );
   };
+  const removeAllItem = () => {
+    const keysToRemove = Object.keys(localStorage).filter((key) => key.includes('cartItem'));
+    keysToRemove.forEach((key) => localStorage.removeItem(key));
+    setItems([]);
+  };
 
   const [counts, setCounts] = useState([]);
 
@@ -81,12 +86,9 @@ export default function CarritoComponente() {
       const count = parseFloat(counts[index]);
       totalPrice += price * count;
     });
-    return totalPrice.toLocaleString("es-AR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 3,
-    });
+    return totalPrice
   };
-  
+
   const handleCheckout = () => {
     const orderData = {
       items: items.map((item) => ({
@@ -122,7 +124,7 @@ export default function CarritoComponente() {
         </thead>
         <tbody className="hola2">
           {items.map((item, index) => (
-            <tr key={item.product.idProduct}>
+            <tr className="tr-product" key={item.product.idProduct}>
               <td>
                 <Anchor to={`/details/${item.product.idProduct}`} className="">
                   <img
@@ -163,25 +165,28 @@ export default function CarritoComponente() {
               </td>
             </tr>
           ))}
-          <tr>
+          <tr className="total-purchase">
             <td>Total purchase:</td>
 
             <td colSpan="5">
               ${" "}
               {parseFloat(calculateTotalPrice()).toLocaleString("es-AR", {
-                minimumFractionDigits: 2,
                 maximumFractionDigits: 3,
               })}{" "}
               ,00 ARS
             </td>
           </tr>
-          <button className="mp" onClick={handleCheckout}>
-            {" "}
-            Do you want to pay with?
-            <Image src={mercadopago} className="img-mp" alt="mercadopago" />
-          </button>
+        </tbody>
+        <tbody>
+          <tr className="tr-button">
+            <td >
+              <button className="finish-buy" onClick={handleCheckout}> Buy Now </button>
+              <button className="clean-cart" onClick={removeAllItem}>Empty Cart</button>
+            </td>
+          </tr>
         </tbody>
       </table>
+
     </div>
   );
 }
