@@ -48,8 +48,8 @@ export default function Home() {
             </div>
         </div>
 
-        <h1 className="center-h2">How to prepare a good Argentine mate?</h1>
         <div className="prepare-mate">
+            <h1 className="center-h2">How to prepare a good Argentine mate?</h1>
             <div className="prepare-mate-pass">
                 <img src={paso1} alt="" className="pasesImg"/>
                 <div>

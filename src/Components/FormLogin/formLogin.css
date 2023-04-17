@@ -40,6 +40,7 @@
   font-size: 14px;
   border: none;
   margin-bottom: 10px;
+  box-shadow: 0 0 3px 0 black;
 }
 .sign-in-google {
   display: flex;
@@ -52,6 +53,7 @@
   background: #ffffff;
   border-radius: 8px;
   gap: 0.5rem;
+  box-shadow: 0 0 3px 0 black;
 }
 .color-black{
   color: black;
@@ -61,6 +63,13 @@
 }
 .p-login-register{
   color: black;
+}
+.buttons-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 5px;
 }
 @media (min-width:320px) and (max-width:1023px){
   .login-fondo{

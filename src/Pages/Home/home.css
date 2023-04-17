@@ -9,7 +9,7 @@
 .container-home {
     width: 100%;
     min-height: 85vh;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.669);
 }
 
 .seccion-final {
@@ -72,7 +72,7 @@
     width: 100%;
 }
 .cont-part-2{
-    display: flex;
+    display: none;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -101,7 +101,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    padding-bottom: 20px;
 }
 .center-h2{
     text-align: center;
