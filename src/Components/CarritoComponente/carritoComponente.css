@@ -36,7 +36,7 @@ table {
     width: 90%;
     height: 30%;
     border: none;
-    background-color: #9e272741;
+    background-color: #fd2e2e73;
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 8px;
@@ -46,7 +46,7 @@ table {
     border-radius: 4px;
 }
 .clean-cart:hover{
-    background-color: #fd2e2e63;
+    background-color: #fd2e2e65;
 }
 
 
@@ -82,6 +82,7 @@ table {
     margin-left: 20px;
 }
 
+
 @media (min-width:320px) and (max-width:760px){
     thead{
         display: none;
@@ -109,5 +110,7 @@ table {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
-
+    .productImage{
+        width: 50%;
+    }
 }

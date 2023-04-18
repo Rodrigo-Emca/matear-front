@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './header.css'
-import ImgHome from '../../Img/LOGO-MATEAR-BLANCO.png'
+import ImgHome from '../../Img/MATE.AR-BLANCO-LOGO.png'
 import { NavLink } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
 import MenuHam from '../../Components/MenuHam/MenuHam';
