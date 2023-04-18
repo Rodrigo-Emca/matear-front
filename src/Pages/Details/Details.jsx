@@ -44,13 +44,13 @@ export default function Details() {
     switch (value) {
       case '643870a794742add718cb2f4':
         return 'mates';
-      case '643870a794742add718cb2f4':
-        return 'thermos';
       case '643870a794742add718cb2f5':
-        return 'strawbulbs';
+        return 'thermos';
       case '643870a794742add718cb2f6':
-        return 'accessories';
+        return 'strawbulbs';
       case '643870a794742add718cb2f7':
+        return 'accessories';
+      case '643870a794742add718cb2f8':
         return 'mate carriers';
       default:
         return '';
