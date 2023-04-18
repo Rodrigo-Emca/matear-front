@@ -107,6 +107,12 @@ p {
   align-items: center;
   gap: 10px;
 }
+
+.anchorToGithub {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
 @media (max-width: 750px) {
   .section-contact {
     gap: 1rem;

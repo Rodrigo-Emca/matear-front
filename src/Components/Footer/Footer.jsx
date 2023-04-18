@@ -19,23 +19,38 @@ function Footer() {
           <Image src={logoMate} alt="Termo" className="img-logo" />
         </div>
         <div className="anchors-pages">
+          {/* <Anchor className="anchor" to="./shop">
+            Shop
+          </Anchor>
+          <Anchor className="anchor" to="./about-us">
+            About Us
+          </Anchor> */}
+          {/* <Anchor className="anchor" to="./contact">
+            Contact
+          </Anchor> */}
+          <Anchor className="anchorToGithub" to="https://github.com/LucasmSantoss">
+            Lucas Santos
+          </Anchor>
+          <Anchor className="anchorToGithub" to="https://github.com/JuanBarberis">
+            Juan Barberis
+          </Anchor>
+          <Anchor className="anchorToGithub" to="https://github.com/salomoncjl">
+            Salomón Contreras
+          </Anchor>
+          <Anchor className="anchorToGithub" to="https://github.com/Rodrigo-Emca">
+            Rodrigo Cabrera
+          </Anchor>
+        </div>
+        <div className="pay">
+          {/* <p>Payment Methods</p> */}
+          {/* <Image src={paypal} alt="Paypal" /> */}
+          {/* <Image src={mercadopago} alt="MercadoPago" /> */}
           <Anchor className="anchor" to="./shop">
             Shop
           </Anchor>
           <Anchor className="anchor" to="./about-us">
             About Us
           </Anchor>
-          {/* <Anchor className="anchor" to="./contact">
-            Contact
-          </Anchor> */}
-          <Anchor className="anchor" to="./whole-saler">
-            WholeSaler
-          </Anchor>
-        </div>
-        <div className="pay">
-          <p>Payment Methods</p>
-          {/* <Image src={paypal} alt="Paypal" /> */}
-          <Image src={mercadopago} alt="MercadoPago" />
         </div>
         <div className="contact-us">
           <div className="cont-footer-contact">
