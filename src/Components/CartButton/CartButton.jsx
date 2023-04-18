@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './cartButton.css';
-import { BiCart } from "react-icons/bi"
+// import { BiCart } from "react-icons/bi"
 import { GiShoppingCart } from "react-icons/gi"
 
 export default function CartButton(props) {
@@ -31,7 +31,7 @@ export default function CartButton(props) {
 
     return (
         <button onClick={handleClick} className={buttonClass}>
-            <BiCart className='carrito-shop'/>
+            <GiShoppingCart className='carrito-shop'/>
         </button>
     );
 }

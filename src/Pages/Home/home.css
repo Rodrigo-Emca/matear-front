@@ -131,6 +131,7 @@
 @media (min-width: 320px) and (max-width: 900px){
     .prepare-mate-pass{
         flex-direction: column;
+        gap: 1rem;
     }
     .reverse-column{
         flex-direction: column-reverse;

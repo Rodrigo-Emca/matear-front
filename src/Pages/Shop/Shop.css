@@ -4,7 +4,7 @@
 .container-shop {
   display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 85vh;
   background-color: #e6e6e6;
   padding-top: 30px;
   padding-bottom: 30px;
