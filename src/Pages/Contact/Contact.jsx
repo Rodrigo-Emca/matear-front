@@ -22,11 +22,7 @@ export default function Contact() {
         </div>
         <div className="description">
           <p id="wellcome">
-            Our business is located in the heart of the city, just a few blocks
-            away from the main square. You can find us at 123 Main Street, near
-            the corner of Broadway and Main. We're easily accessible by public
-            transportation and there is ample parking nearby. We look forward to
-            seeing you soon!
+            Our business is located in the heart of the city, just a few blocks away from the main square. You can find us at Buenos Aires Main Street. We're easily accessible by public transportation and there is ample parking nearby. We look forward to seeing you soon!
           </p>
         </div>
       </div>
