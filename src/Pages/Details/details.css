@@ -18,6 +18,7 @@
   height: auto;
   object-fit: contain;
   border-radius: 2%;
+  box-shadow: 0 0 10px 0 black;
 }
 
 .img-zoom-container {
@@ -68,13 +69,14 @@
   width: calc(33.33% - 5px);
   margin-bottom: 10px;
   cursor: pointer;
-  border-radius: 2%;
+  border-radius: 4px;
 }
 
 .gallery-img img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  box-shadow: 0 0 7px 0 black;
 }
 
 .info-detail {
@@ -87,6 +89,7 @@
   background: #C5A880;
   color: rgb(12, 12, 12);
   border-radius: 2%;
+  box-shadow: 0 0 7px 0 black;
 }
 
 .info-detail h1 {

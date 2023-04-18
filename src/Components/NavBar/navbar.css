@@ -2,8 +2,8 @@
     display: flex;
     gap: 25px;
     margin-top: 10px;
-    max-width: 480px;
-    padding-right: 10px;
+    max-width: 540px;
+    padding-right: 40px;
 }
 
 .anchor-header .link-home {
@@ -23,15 +23,22 @@
     padding: 5px; */
     border-bottom: 2px solid white ;
 }
-
-.carritoCompras{
+.cart-home{
     width: 30px;
+    height: 30px;
+}
+.carritoCompras{
+    width: 35px;
+    height: 30px;
 }
 
 .carritoCompras:hover {
     transform: rotate(-10deg);
 }
-
+.perfilIcon{
+    width: 23px;
+    height: 25px;
+}
 .perfilIcon:hover{
     animation: shake-harder 2.0s;
     animation-iteration-count: infinite;
@@ -56,8 +63,8 @@
         display: none;
     }
 }
-@media (min-width:750px) and (max-width:1100px){
+/* @media (min-width:750px) and (max-width:1100px){
     .anchor-header{
         padding-right: 5px;
     }
-}
+} */

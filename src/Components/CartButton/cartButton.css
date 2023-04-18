@@ -6,9 +6,8 @@
 }
 .cart-button.pressed {
 
-    color: red;
+    color: rgba(255, 255, 255, 0.493);
     border: none;
-    background-color: transparent;
 }
 
 .carrito-shop{

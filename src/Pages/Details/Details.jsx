@@ -44,13 +44,13 @@ export default function Details() {
     switch (value) {
       case '643870a794742add718cb2f4':
         return 'mates';
-      case '643870a794742add718cb2f4':
-        return 'thermos';
       case '643870a794742add718cb2f5':
-        return 'strawbulbs';
+        return 'thermos';
       case '643870a794742add718cb2f6':
-        return 'accessories';
+        return 'strawbulbs';
       case '643870a794742add718cb2f7':
+        return 'accessories';
+      case '643870a794742add718cb2f8':
         return 'mate carriers';
       default:
         return '';
@@ -80,7 +80,7 @@ export default function Details() {
   <p>{productoSimple?.product_id?.description}</p>
   <p>Stock: <span style={{color: productoSimple?.product_id?.stock < 3 ? 'red' : 'green'}}>{productoSimple?.product_id?.stock}</span></p>
   <p>Precio: ${productoSimple?.product_id?.price}</p>
-  <button className="btn-detail">Agregar al carrito</button>
+  {/* <button className="btn-detail">Agregar al carrito</button> */}
   
   <p>Categorias: <span>{productoSimple?.product_id && getCategoryName(productoSimple?.product_id?.category_id)}</span>
   </p>

@@ -1,0 +1,62 @@
+.buy-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../Img/yerba-mate-fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    
+    .button-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 2rem;
+    }
+
+    .thanks {
+        font-size: 25px;
+        color: Black;
+
+    }
+    
+    .thanks-span {
+        color:#c05f22;
+       
+    }
+
+    .thanks-container{
+        width: auto;
+        height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    gap: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e6e6e6c7;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 15px black;
+    }
+
+
+    .button-container .anchor {
+    color: #fff;
+    text-decoration: none;
+    background-color: #C5A880;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    }
+    
+    .button-container .anchor:hover {
+    transform: translateY(-0.2rem);
+    color: black;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }

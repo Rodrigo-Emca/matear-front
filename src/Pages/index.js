@@ -10,7 +10,9 @@ import Profile from "./Profile/Profile.jsx"
 import Home from "./Home/Home.jsx"
 import Index from "./Index/Index.jsx"
 import CreateArticle from "./CreateArticle/CreateArticle.jsx"
+import Buy from './Buy/Buy.jsx'
 import EditProduct from "./EditProduct/EditProduct.jsx"
+import Contact from "./Contact/Contact.jsx"
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +37,8 @@ export const router = createBrowserRouter([
       { path: "/profile", element: <Profile/>},
       { path: "/newarticle", element: <CreateArticle/>},
       { path: "/products/:id", element: <EditProduct/>},
+      { path: "/thanks",  element: <Buy/>},
+      { path: "/about-us", element: <Contact/>}
     ]
   }
 

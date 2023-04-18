@@ -1,7 +1,7 @@
 import React from 'react'
 import './wellcome.css'
 
-import ImgLogoForm from '../../Img/logo-matear-no-borders.png'
+import ImgLogoForm from '../../Img/MATE.AR-NEGRO-LOGO.png'
 
 export default function Wellcome() {
     return (
