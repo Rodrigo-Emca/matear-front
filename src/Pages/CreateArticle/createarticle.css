@@ -1,0 +1,109 @@
+.product {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    background-image: url(../../Img/imagen-fondo-np.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product .product-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.54vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e6e6e6c7;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 15px black;
+}
+
+.product .product-content .new-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.04vh;
+}
+
+.product .product-content .new-product h2 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+    text-align: center; 
+}
+.product .product-content .product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5.364vh;
+    width: 80%;
+}
+
+.product .product-content .product-form .product-input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #424242;
+    height: 2.467vh;
+    width: 100%;
+}
+
+.product .product-content .product-form .product-input::placeholder {
+    color: black;
+}
+
+.product .product-content .product-form select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #424242;
+}
+
+  
+
+
+.product .product-content .send-newproduct {
+    display: inline-block;
+    padding: 15px;
+    margin: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #428bca;
+}
+
+.product .product-content .send-newproduct:hover {
+    background-color: #3276b1;
+
+}
+
+
+@media (min-width:320px) and (max-width:450px) {
+    .product .product-content .new-product h2{
+        font-weight: 400;
+        font-size: 25px;
+        flex-wrap: wrap;
+    }
+}
+
+
+.fade-in {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

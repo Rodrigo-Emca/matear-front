@@ -1,0 +1,31 @@
+.countContainer{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.countContainer .count-product{
+    display: flex;
+    gap:10px;
+}
+.countButtonMore{
+    width: 20px;
+    height: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.countButtonMinus{
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    color: black;
+}
+.countButtonReset{
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+.countButtonReset:hover{
+    color: red;
+    cursor: pointer;
+}

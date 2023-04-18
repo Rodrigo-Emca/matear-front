@@ -1,0 +1,185 @@
+/* *{
+    border: 1px solid red
+} */
+.container-shop {
+  display: flex;
+  width: 100%;
+  min-height: 85vh;
+  background-color: #e6e6e6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.filtroPrecios {
+  display: flex;
+  width: 20;
+  padding-left: 20px;
+}
+
+.contenedorFiltroYCards {
+  display: flex;
+  width: 80vw;
+}
+
+.cont-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.cont-search-checks {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 250px;
+  height: 300px;
+  /* margin-right: 5px; */
+}
+
+.check-cat {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 70px;
+}
+
+.input-search {
+  border: 1px solid grey;
+  border-radius: 20px;
+  width: 90%;
+  padding: 5px;
+}
+
+.buscar {
+  position: absolute;
+  padding: 5px;
+  margin-top: -15px;
+  margin-left: 30px;
+  left: 0;
+}
+
+.buscar input {
+  width: 0px;
+  height: 30px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s;
+}
+
+.buscar input::placeholder {
+  font-size: 14px;
+  /* color: rgb(88, 88, 88); */
+  /* font-weight: bold; */
+}
+
+.icon-search {
+  display: flex;
+  width: 25px;
+}
+
+.btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid silver;
+}
+
+.buscar:hover input {
+  width: 215px;
+}
+
+.buscar input:focus {
+  width: 215px;
+}
+
+.not-found-color {
+  color: black;
+}
+
+.product-card {
+  opacity: 0.5;
+  /* Ajusta el valor de opacidad a tu gusto */
+  transition: opacity 0.5s ease;
+  /* Añade una transición para que el cambio de opacidad sea suave */
+}
+
+.product-card.visible {
+  opacity: 1;
+  /* Cuando la tarjeta es visible, establece la opacidad a 1 */
+}
+
+@media (min-width: 491px) and (max-width: 599px) {
+  .container-shop {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .cont-search-checks {
+    height: 250px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    width: 290px;
+  }
+
+  .buscar {
+    margin-left: 20%;
+    padding-left: 2.5rem;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 490px) {
+  .container-shop {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .cont-search-checks {
+    height: 250px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    width: 285px;
+  }
+  .buscar {
+    margin-left: 15%;
+    padding-left: 1rem;
+  }
+  .filtroPrecios {
+    padding: 0;
+    margin-left: 20px;
+}
+}

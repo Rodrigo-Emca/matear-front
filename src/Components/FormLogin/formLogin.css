@@ -1,0 +1,87 @@
+.login-fondo{
+  background-color: #e6e6e6c7;
+  border-radius: 5px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  box-shadow: 0 0 8px 0 black;
+}
+.form-login{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.email-login, .password-login{
+  width: 250px;
+  padding: 1px;
+  /* border-radius: 20px; */
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(120, 120, 120);
+}
+.email-login:focus,.password-login:focus{
+    outline: none;
+}
+.sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  background: #C5A880;
+  color: white;
+  width: 250px;
+  height: 40px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: 0 0 3px 0 black;
+}
+.sign-in-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 250px;
+  border: 1px solid #1f1f1f84;
+  background: #ffffff;
+  border-radius: 8px;
+  gap: 0.5rem;
+  box-shadow: 0 0 3px 0 black;
+}
+.color-black{
+  color: black;
+}
+.ancor-register{
+  color: green;
+  border-bottom: 1px solid green;
+  font-weight: bold;
+}
+.p-login-register{
+  color: black;
+}
+.buttons-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 5px;
+}
+@media (min-width:320px) and (max-width:1023px){
+  .login-fondo{
+    min-width: 310px;
+    margin: 10px;
+  }
+}
+
+/* @media (min-width:320px) and (max-width:768px){
+  .p-login-register{
+    font-size: 1rem;
+  }
+} */
+
