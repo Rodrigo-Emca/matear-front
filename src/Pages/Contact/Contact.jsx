@@ -1,13 +1,14 @@
 import React from "react";
 import "./contact.css";
-import imgHome1 from "../../Img/yerba-mate-fondo.jpg";
+// import imgHome1 from "../../Img/yerba-mate-fondo.jpg";
+import imgContact2 from "../../Img/Termo-de-acero-inoxidable.png";
 
 export default function Contact() {
   return (
-    <>
+    <div className="cont-contact">
       <div className="cont-part-2">
         <div className="info-one">
-          <img src={imgHome1} alt="Yerba mate" className="imgHomeWidth" />
+          <img src={imgContact2} alt="Termo y mate" className="imgHomeWidth" />
           <p className="color-black p-space-home">We are proud to offer the highest quality thermos and mate products on the market. Our business was born out of a love for the rich culture and tradition of sharing mate with friends and family. We understand that mate is not just a drink, but a way of life for many people around the world, and we are committed to providing the to and accessories necessary to enjoy this experience to the fullest.
           </p>
         </div>
@@ -29,6 +30,6 @@ export default function Contact() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

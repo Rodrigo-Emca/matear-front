@@ -1,5 +1,5 @@
 import React from 'react';
-import MateRegister from '../../Img/mateRegister.png'
+// import MateRegister from '../../Img/mateRegister.png'
 import FormRegister from '../../Components/FormRegister/FormRegister.jsx'
 import './register.css'
 

@@ -71,31 +71,11 @@
 .middle-image{
     width: 100%;
 }
-.cont-part-2{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
+
 .color-black{
     color: black;
 }
-.info-one{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-}
-.imgHomeWidth{
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
-}
-.p-space-home{
-    width: 310px;
-    text-align: center;
-}
+
 .prepare-mate{
     display: flex;
     align-items: center;
